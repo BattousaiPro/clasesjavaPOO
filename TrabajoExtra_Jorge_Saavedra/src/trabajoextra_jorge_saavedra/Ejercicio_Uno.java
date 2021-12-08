@@ -35,6 +35,7 @@ public class Ejercicio_Uno extends javax.swing.JFrame {
         jButtonCantidadVocales = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ejercicio 1");
@@ -70,6 +71,9 @@ public class Ejercicio_Uno extends javax.swing.JFrame {
 
         jLabel3.setText("Resultado");
 
+        jLabel5.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 0, 0));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -83,9 +87,6 @@ public class Ejercicio_Uno extends javax.swing.JFrame {
                             .addComponent(jLabel1)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(32, 32, 32)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -95,11 +96,17 @@ public class Ejercicio_Uno extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(32, 32, 32)
-                        .addComponent(jButtonValidaPalindromo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                        .addComponent(jButtonCantidadVocales)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButtonValidaPalindromo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                                .addComponent(jButtonCantidadVocales))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addGap(32, 32, 32))
         );
         layout.setVerticalGroup(
@@ -109,9 +116,11 @@ public class Ejercicio_Uno extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(8, 8, 8)
                 .addComponent(jLabel2)
-                .addGap(16, 16, 16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addGap(8, 8, 8)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonValidaPalindromo)
                     .addComponent(jButtonCantidadVocales))
@@ -134,44 +143,56 @@ public class Ejercicio_Uno extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButtonValidaPalindromoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonValidaPalindromoActionPerformed
-        String palabra;
-        char[] palindromo;
-        int izq, der;
-        jTextField1.setText(jTextField1.getText().trim().toLowerCase());
-        palabra = jTextField1.getText();
+        jLabel5.setText("");
         jLabel4.setText("");
-        palindromo = palabra.toCharArray();
-        izq = 0;
-        der = palindromo.length - 1;
-        while (izq < der) {
-            if (palindromo[izq] == palindromo[der]) {
-                der--;
-                izq++;
-            } else {
-                jLabel4.setText("Su Palabra no es un Palindromo");
-                break;
+        this.jTextField1.setText(this.jTextField1.getText().trim());
+        if ("".equals(this.jTextField1.getText())) {
+            this.jLabel5.setText("Campo Obligatorio.");
+        } else {
+            String palabra;
+            char[] palindromo;
+            int izq, der;
+            jTextField1.setText(jTextField1.getText().toLowerCase());
+            palabra = jTextField1.getText();
+            palindromo = palabra.toCharArray();
+            izq = 0;
+            der = palindromo.length - 1;
+            while (izq < der) {
+                if (palindromo[izq] == palindromo[der]) {
+                    der--;
+                    izq++;
+                } else {
+                    jLabel4.setText("Su Palabra no es un Palindromo");
+                    break;
+                }
             }
-        }
-        if (izq == der) {
-            jLabel4.setText("Su Palabra es un Palindromo");
+            if (izq == der) {
+                jLabel4.setText("Su Palabra es un Palindromo");
+            }
         }
     }//GEN-LAST:event_jButtonValidaPalindromoActionPerformed
 
     private void jButtonCantidadVocalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCantidadVocalesActionPerformed
-        jTextField1.setText(jTextField1.getText().trim().toLowerCase());
-        String palabra = jTextField1.getText();
-        int contador = 0;
+        jLabel5.setText("");
         jLabel4.setText("");
-        for (int x = 0; x < palabra.length(); x++) {
-            if ((palabra.charAt(x) == 'a')
-                    || (palabra.charAt(x) == 'e')
-                    || (palabra.charAt(x) == 'i')
-                    || (palabra.charAt(x) == 'o')
-                    || (palabra.charAt(x) == 'u')) {
-                contador++;
+        this.jTextField1.setText(this.jTextField1.getText().trim());
+        if ("".equals(this.jTextField1.getText())) {
+            this.jLabel5.setText("Campo Obligatorio.");
+        } else {
+            jTextField1.setText(jTextField1.getText().trim().toLowerCase());
+            String palabra = jTextField1.getText();
+            int contador = 0;
+            for (int x = 0; x < palabra.length(); x++) {
+                if ((palabra.charAt(x) == 'a')
+                        || (palabra.charAt(x) == 'e')
+                        || (palabra.charAt(x) == 'i')
+                        || (palabra.charAt(x) == 'o')
+                        || (palabra.charAt(x) == 'u')) {
+                    contador++;
+                }
             }
+            jLabel4.setText("Su Palabra contiene " + contador + " vocales");
         }
-        jLabel4.setText("Su Palabra contiene " + contador + " vocales" );
     }//GEN-LAST:event_jButtonCantidadVocalesActionPerformed
 
     /**
@@ -217,6 +238,7 @@ public class Ejercicio_Uno extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
