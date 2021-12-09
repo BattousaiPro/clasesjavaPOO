@@ -53,7 +53,7 @@ public class Ejercicio_Uno extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel2.setText("Descripción");
+        jLabel2.setText("Palabra");
 
         jButtonValidaPalindromo.setText("Validar Palindromo");
         jButtonValidaPalindromo.addActionListener(new java.awt.event.ActionListener() {

@@ -51,7 +51,7 @@ public class Ejercicio_Dos extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel2.setText("Descripción");
+        jLabel2.setText("Cálculo");
 
         jLabel3.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 0, 0));
