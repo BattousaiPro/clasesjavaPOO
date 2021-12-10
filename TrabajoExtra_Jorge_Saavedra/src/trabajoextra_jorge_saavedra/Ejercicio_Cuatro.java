@@ -234,6 +234,7 @@ public class Ejercicio_Cuatro extends javax.swing.JFrame {
                 Double num = Double.parseDouble(this.jTextField2.getText().trim());
             } catch (NumberFormatException e) {
                 this.jLabel6.setText("Debe ser un número.");
+                errPrecio = true;
             }
         }
 
