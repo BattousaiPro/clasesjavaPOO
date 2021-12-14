@@ -307,7 +307,7 @@ public class FormularioPrincipal extends javax.swing.JFrame {
             Cliente cli = new Cliente();
             cli.setIdCliente(Integer.parseInt(jTextField1.getText()));
             cli.setCargo(Integer.parseInt(jTextField2.getText()));
-            cli.setCiudad(Integer.parseInt(jTextField3.getText()));
+            cli.setCiudad(jTextField3.getText());
             cli.setTarjetasQueosee(Integer.parseInt(jTextField4.getText()));
             // Datos de la persona.
             Date dt = new Date(jTextField8.getText());
@@ -323,6 +323,9 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    /**
+     * A lo que teste Jurulando esto xD.
+     */
     public boolean ValidarCamposObligatorios() {
         return false;
     }

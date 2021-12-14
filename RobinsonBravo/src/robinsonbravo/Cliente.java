@@ -9,14 +9,14 @@ public class Cliente extends Persona{
 
     private int idCliente;
     private int cargo;
-    private int ciudad;
+    private String ciudad;
     private int tarjetasQueosee;
     private int edad;
 
     public Cliente() {
     }
 
-    public Cliente(int idCliente, int cargo, int ciudad, int tarjetasQueosee, int edad, String rut, String nombre, String apellido, Date fecha_nacimiento, String estadoCivil, String sexo) {
+    public Cliente(int idCliente, int cargo, String ciudad, int tarjetasQueosee, int edad, String rut, String nombre, String apellido, Date fecha_nacimiento, String estadoCivil, String sexo) {
         super(rut, nombre, apellido, fecha_nacimiento, estadoCivil, sexo);
         this.idCliente = idCliente;
         this.cargo = cargo;
@@ -25,7 +25,7 @@ public class Cliente extends Persona{
         this.edad = edad;
     }
 
-    public Cliente(int idCliente, int cargo, int ciudad, int tarjetasQueosee, int edad) {
+    public Cliente(int idCliente, int cargo, String ciudad, int tarjetasQueosee, int edad) {
         this.idCliente = idCliente;
         this.cargo = cargo;
         this.ciudad = ciudad;
@@ -43,7 +43,7 @@ public class Cliente extends Persona{
         this.cargo = cargo;
     }
 
-    public void setCiudad(int ciudad) {
+    public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
     }
 
@@ -67,7 +67,7 @@ public class Cliente extends Persona{
         return cargo;
     }
 
-    public int getCiudad() {
+    public String getCiudad() {
         return ciudad;
     }
 
