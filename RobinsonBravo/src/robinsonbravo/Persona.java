@@ -1,9 +1,9 @@
-
 package robinsonbravo;
 
 import java.util.Date;
 
 public class Persona {
+
     private String rut;
     private String nombre;
     private String apellido;
@@ -69,6 +69,18 @@ public class Persona {
 
     public void setSexo(String sexo) {
         this.sexo = sexo;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{"
+                + "rut=" + rut
+                + ", nombre=" + nombre
+                + ", apellido=" + apellido
+                + ", fecha_nacimiento=" + fecha_nacimiento.toString()
+                + ", estadoCivil=" + estadoCivil
+                + ", sexo=" + sexo
+                + '}';
     }
 
 }

@@ -1,7 +1,7 @@
-
 package robinsonbravo;
 
 public class Cliente {
+
     private int idCliente;
     private int cargo;
     private int ciudad;
@@ -47,6 +47,16 @@ public class Cliente {
 
     public int getTarjetasQueosee() {
         return tarjetasQueosee;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{"
+                + "idCliente=" + idCliente
+                + ", cargo=" + cargo
+                + ", ciudad=" + ciudad
+                + ", tarjetasQueosee=" + tarjetasQueosee
+                + '}';
     }
 
 }
