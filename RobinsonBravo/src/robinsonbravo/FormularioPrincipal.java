@@ -67,6 +67,7 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         jLabel22 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        jButton2 = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -132,14 +133,20 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jTable2);
 
+        jButton2.setText("Limpiar Campos");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addComponent(jLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jLabel1))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
@@ -147,17 +154,18 @@ public class FormularioPrincipal extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(28, 28, 28)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
                                             .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING))))
                                 .addGap(37, 37, 37)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -186,32 +194,27 @@ public class FormularioPrincipal extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField8, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextField10, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))))
+                        .addGap(12, 12, 12)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField8, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTextField10, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap(24, Short.MAX_VALUE)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 773, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
-                .addGap(24, 24, 24))
+                .addGap(24, 24, 24)
+                .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -221,12 +224,8 @@ public class FormularioPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(12, 12, 12)
                         .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18))
+                        .addGap(0, 0, 0))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -249,7 +248,9 @@ public class FormularioPrincipal extends javax.swing.JFrame {
                                 .addGap(24, 24, 24)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel16)
-                                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(12, 12, 12)
                                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
@@ -292,10 +293,12 @@ public class FormularioPrincipal extends javax.swing.JFrame {
                         .addGap(12, 12, 12)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(24, 24, 24)
-                .addComponent(jButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
                 .addGap(29, 29, 29)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(231, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
@@ -323,11 +326,128 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        jTextField5.setText("");
+        jTextField6.setText("");
+        jTextField7.setText("");
+        jTextField8.setText("");
+        jTextField9.setText("");
+        jTextField10.setText("");
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
+        jTextField4.setText("");
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * A lo que teste Jurulando esto xD.
      */
     public boolean ValidarCamposObligatorios() {
-        return false;
+        this.jTextField5.setText("");
+        this.jTextField6.setText("");
+        this.jTextField7.setText("");
+        this.jTextField8.setText("");
+        this.jTextField9.setText("");
+        this.jTextField10.setText("");
+        this.jTextField1.setText("");
+        this.jTextField2.setText("");
+        this.jTextField3.setText("");
+        this.jTextField4.setText("");
+
+        this.jTextField5.setText(jTextField5.getText().trim());
+        this.jTextField6.setText(jTextField6.getText().trim());
+        this.jTextField7.setText(jTextField7.getText().trim());
+        this.jTextField8.setText(jTextField8.getText().trim());
+        this.jTextField9.setText(jTextField9.getText().trim());
+        this.jTextField10.setText(jTextField10.getText().trim());
+        this.jTextField1.setText(jTextField1.getText().trim());
+        this.jTextField2.setText(jTextField2.getText().trim());
+        this.jTextField3.setText(jTextField3.getText().trim());
+        this.jTextField4.setText(jTextField4.getText().trim());
+
+        boolean errRut = false;
+        boolean errNombre = false;
+        boolean errApellido = false;
+        boolean errFechadeNacimiento = false;
+        boolean errEstadoCivil = false;
+        boolean errSexo = false;
+        boolean errIDCliente = false;
+        boolean errCargo = false;
+        boolean errCiudad = false;
+        boolean errTarjetaqueposee = false;
+
+        if ("".equals(this.jTextField5.getText().trim())) {
+            this.jLabel15.setText("Campo Obligatorio.");
+            errRut = true;
+        } else {
+            try {
+                Double num = Double.parseDouble(this.jTextField5.getText().trim());
+            } catch (NumberFormatException e) {
+                this.jLabel15.setText("Debe ser un número.");
+                errRut = true;
+            }
+        }
+
+        if ("".equals(this.jTextField6.getText().trim())) {
+            this.jLabel18.setText("Campo Obligatorio.");
+            errRut = true;
+        }
+
+        if ("".equals(this.jTextField7.getText().trim())) {
+            this.jLabel11.setText("Campo Obligatorio.");
+            errRut = true;
+        }
+
+        if ("".equals(this.jTextField8.getText().trim())) {
+            this.jLabel14.setText("Campo Obligatorio.");
+            errRut = true;
+        } else {
+            try {
+                Double num = Double.parseDouble(this.jTextField8.getText().trim());
+            } catch (NumberFormatException e) {
+                this.jLabel14.setText("Debe ser un número.");
+                errRut = true;
+            }
+        }
+
+        if ("".equals(this.jTextField9.getText().trim())) {
+            this.jLabel19.setText("Campo Obligatorio.");
+            errRut = true;
+        }
+
+        if ("".equals(this.jTextField10.getText().trim())) {
+            this.jLabel22.setText("Campo Obligatorio.");
+            errRut = true;
+        }
+
+        if ("".equals(this.jTextField1.getText().trim())) {
+            this.jLabel13.setText("Campo Obligatorio.");
+            errRut = true;
+        } else {
+            try {
+                Double num = Double.parseDouble(this.jTextField1.getText().trim());
+            } catch (NumberFormatException e) {
+                this.jLabel13.setText("Debe ser un número.");
+                errRut = true;
+            }
+        }
+
+        if ("".equals(this.jTextField2.getText().trim())) {
+            this.jLabel5.setText("Campo Obligatorio.");
+            errRut = true;
+        }
+
+        if ("".equals(this.jTextField3.getText().trim())) {
+            this.jLabel7.setText("Campo Obligatorio.");
+            errRut = true;
+        }
+
+        if ("".equals(this.jTextField4.getText().trim())) {
+            this.jLabel9.setText("Campo Obligatorio.");
+            errRut = true;
+        }
+        return errRut || errNombre || errApellido || errFechadeNacimiento || errEstadoCivil || errSexo || errIDCliente || errCargo || errCiudad || errTarjetaqueposee;
     }
 
     /**
@@ -371,6 +491,7 @@ public class FormularioPrincipal extends javax.swing.JFrame {
     private ArrayList<Cliente> cliList;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
