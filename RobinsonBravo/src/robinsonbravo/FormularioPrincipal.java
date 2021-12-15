@@ -6,6 +6,7 @@ package robinsonbravo;
 
 import java.util.ArrayList;
 import java.util.Date;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -104,6 +105,12 @@ public class FormularioPrincipal extends javax.swing.JFrame {
 
         jLabel10.setText("Apellido:");
 
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
+
         jLabel12.setText("Fecha Nacimiento:");
         jLabel12.setToolTipText("");
 
@@ -120,11 +127,11 @@ public class FormularioPrincipal extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Rut", "Nombre", "Apellido", "Fecha de Nacimiento", "Estado Civil", "Sexo", "ID Cliente", "Cargo", "Ciudad", "Tarjeta que Posee"
+                "Nro", "Rut", "Nombre", "Apellido", "Fecha de Nacimiento", "Estado Civil", "Sexo", "ID Cliente", "Cargo", "Ciudad", "Tarjeta que Posee"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -223,9 +230,7 @@ public class FormularioPrincipal extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0))
+                    .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -323,27 +328,39 @@ public class FormularioPrincipal extends javax.swing.JFrame {
             cli.calcularEdad(jTextField8.getText());
             cliList.add(cli);
             // Pendenite cargar a la tabla los valores.
+            this.jTable2.setModel(new DefaultTableModel(null, new String[]{"Nro", "Rut", "Nombre", "Apellido", "Fecha de Nacimiento", "Estado Civil", "Sexo", "ID Cliente", "Cargo", "Ciudad", "Tarjeta que Posee"}));
+            for (int i = 0; i < cliList.size(); i++) {
+                DefaultTableModel model = (DefaultTableModel) this.jTable2.getModel();
+
+                model.addRow(new Object[]{
+                    i + 1,
+                    cliList.get(i).getNombre(),
+                    cliList.get(i).getNombre(),
+                    cliList.get(i).getNombre(),
+                    cliList.get(i).getNombre(),
+                    cliList.get(i).getNombre(),
+                    cliList.get(i).getNombre(),
+                    cliList.get(i).getNombre(),
+                    cliList.get(i).getNombre(),
+                    cliList.get(i).getNombre(),
+                    cliList.get(i).getNombre()
+                });
+            }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        jTextField5.setText("");
-        jTextField6.setText("");
-        jTextField7.setText("");
-        jTextField8.setText("");
-        jTextField9.setText("");
-        jTextField10.setText("");
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField3.setText("");
-        jTextField4.setText("");
 
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    /**
-     * A lo que teste Jurulando esto xD.
-     */
-    public boolean ValidarCamposObligatorios() {
+        this.jLabel15.setText("");
+        this.jLabel18.setText("");
+        this.jLabel11.setText("");
+        this.jLabel14.setText("");
+        this.jLabel19.setText("");
+        this.jLabel22.setText("");
+        this.jLabel3.setText("");
+        this.jLabel5.setText("");
+        this.jLabel7.setText("");
+        this.jLabel9.setText("");
         this.jTextField5.setText("");
         this.jTextField6.setText("");
         this.jTextField7.setText("");
@@ -354,6 +371,25 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         this.jTextField2.setText("");
         this.jTextField3.setText("");
         this.jTextField4.setText("");
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+  
+    public boolean ValidarCamposObligatorios() {
+        this.jLabel15.setText("");
+        this.jLabel18.setText("");
+        this.jLabel11.setText("");
+        this.jLabel14.setText("");
+        this.jLabel19.setText("");
+        this.jLabel22.setText("");
+        this.jLabel3.setText("");
+        this.jLabel5.setText("");
+        this.jLabel7.setText("");
+        this.jLabel9.setText("");
 
         this.jTextField5.setText(jTextField5.getText().trim());
         this.jTextField6.setText(jTextField6.getText().trim());
@@ -377,6 +413,7 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         boolean errCiudad = false;
         boolean errTarjetaqueposee = false;
 
+        // Rut
         if ("".equals(this.jTextField5.getText().trim())) {
             this.jLabel15.setText("Campo Obligatorio.");
             errRut = true;
@@ -389,64 +426,81 @@ public class FormularioPrincipal extends javax.swing.JFrame {
             }
         }
 
+        // Nombre
         if ("".equals(this.jTextField6.getText().trim())) {
             this.jLabel18.setText("Campo Obligatorio.");
-            errRut = true;
+            errNombre = true;
         }
 
+        // Apellido
         if ("".equals(this.jTextField7.getText().trim())) {
             this.jLabel11.setText("Campo Obligatorio.");
-            errRut = true;
+            errApellido = true;
         }
 
+        // FechadeNacimiento
         if ("".equals(this.jTextField8.getText().trim())) {
             this.jLabel14.setText("Campo Obligatorio.");
-            errRut = true;
-        } else {
-            try {
-                Double num = Double.parseDouble(this.jTextField8.getText().trim());
-            } catch (NumberFormatException e) {
-                this.jLabel14.setText("Debe ser un número.");
-                errRut = true;
-            }
+            errFechadeNacimiento = true;
         }
 
+        // EstadoCivil
         if ("".equals(this.jTextField9.getText().trim())) {
             this.jLabel19.setText("Campo Obligatorio.");
-            errRut = true;
+            errEstadoCivil = true;
         }
 
+        // Sexo
         if ("".equals(this.jTextField10.getText().trim())) {
             this.jLabel22.setText("Campo Obligatorio.");
-            errRut = true;
+            errSexo = true;
         }
 
+        // IDCliente
         if ("".equals(this.jTextField1.getText().trim())) {
-            this.jLabel13.setText("Campo Obligatorio.");
-            errRut = true;
+            this.jLabel3.setText("Campo Obligatorio.");
+            errIDCliente = true;
         } else {
             try {
                 Double num = Double.parseDouble(this.jTextField1.getText().trim());
             } catch (NumberFormatException e) {
-                this.jLabel13.setText("Debe ser un número.");
-                errRut = true;
+                this.jLabel3.setText("Debe ser un número.");
+                errIDCliente = true;
             }
         }
 
+        // Cargo
         if ("".equals(this.jTextField2.getText().trim())) {
             this.jLabel5.setText("Campo Obligatorio.");
-            errRut = true;
+            errCargo = true;
+        } else {
+            try {
+                Double num = Double.parseDouble(this.jTextField2.getText().trim());
+            } catch (NumberFormatException e) {
+                this.jLabel5.setText("Debe ser un número.");
+                errCargo = true;
+            }
         }
 
+        // Ciudad
         if ("".equals(this.jTextField3.getText().trim())) {
             this.jLabel7.setText("Campo Obligatorio.");
-            errRut = true;
+            errCiudad = true;
         }
 
+        // Tarjetaqueposee
         if ("".equals(this.jTextField4.getText().trim())) {
             this.jLabel9.setText("Campo Obligatorio.");
-            errRut = true;
+            errTarjetaqueposee = true;
+        } else {
+            try {
+                Double num = Double.parseDouble(this.jTextField4.getText().trim());
+            } catch (NumberFormatException e) {
+                this.jLabel9.setText("Debe ser un número.");
+                errTarjetaqueposee = true;
+            }
         }
+
         return errRut || errNombre || errApellido || errFechadeNacimiento || errEstadoCivil || errSexo || errIDCliente || errCargo || errCiudad || errTarjetaqueposee;
     }
 
