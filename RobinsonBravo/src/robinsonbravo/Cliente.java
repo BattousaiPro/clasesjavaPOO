@@ -10,26 +10,26 @@ public class Cliente extends Persona{
     private int idCliente;
     private int cargo;
     private String ciudad;
-    private int tarjetasQueosee;
+    private String tarjetasQuePosee;
     private int edad;
 
     public Cliente() {
     }
 
-    public Cliente(int idCliente, int cargo, String ciudad, int tarjetasQueosee, int edad, String rut, String nombre, String apellido, Date fecha_nacimiento, String estadoCivil, String sexo) {
+    public Cliente(int idCliente, int cargo, String ciudad, String tarjetasQuePosee, int edad, String rut, String nombre, String apellido, Date fecha_nacimiento, String estadoCivil, String sexo) {
         super(rut, nombre, apellido, fecha_nacimiento, estadoCivil, sexo);
         this.idCliente = idCliente;
         this.cargo = cargo;
         this.ciudad = ciudad;
-        this.tarjetasQueosee = tarjetasQueosee;
+        this.tarjetasQuePosee = tarjetasQuePosee;
         this.edad = edad;
     }
 
-    public Cliente(int idCliente, int cargo, String ciudad, int tarjetasQueosee, int edad) {
+    public Cliente(int idCliente, int cargo, String ciudad, String tarjetasQuePosee, int edad) {
         this.idCliente = idCliente;
         this.cargo = cargo;
         this.ciudad = ciudad;
-        this.tarjetasQueosee = tarjetasQueosee;
+        this.tarjetasQuePosee = tarjetasQuePosee;
         this.edad = edad;
     }
 
@@ -47,8 +47,8 @@ public class Cliente extends Persona{
         this.ciudad = ciudad;
     }
 
-    public void setTarjetasQueosee(int tarjetasQueosee) {
-        this.tarjetasQueosee = tarjetasQueosee;
+    public void setTarjetasQuePosee(String tarjetasQuePosee) {
+        this.tarjetasQuePosee = tarjetasQuePosee;
     }
 
     public void setEdad(int edad) {
@@ -71,8 +71,8 @@ public class Cliente extends Persona{
         return ciudad;
     }
 
-    public int getTarjetasQueosee() {
-        return tarjetasQueosee;
+    public String getTarjetasQuePosee() {
+        return tarjetasQuePosee;
     }
 
     public void calcularEdad(String fecha) {
@@ -94,7 +94,7 @@ public class Cliente extends Persona{
                 + "idCliente=" + idCliente
                 + ", cargo=" + cargo
                 + ", ciudad=" + ciudad
-                + ", tarjetasQueosee=" + tarjetasQueosee
+                + ", tarjetasQuePosee=" + tarjetasQuePosee
                 + ", edad=" + edad
                 + '}';
     }
