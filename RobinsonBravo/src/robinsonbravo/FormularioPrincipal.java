@@ -106,12 +106,6 @@ public class FormularioPrincipal extends javax.swing.JFrame {
 
         jLabel10.setText("Apellido:");
 
-        jTextField5Rut.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5RutActionPerformed(evt);
-            }
-        });
-
         jLabel12.setText("Fecha Nacimiento:");
         jLabel12.setToolTipText("");
 
@@ -381,10 +375,6 @@ public class FormularioPrincipal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jTextField5RutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5RutActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5RutActionPerformed
-
     public boolean validarCamposObligatorios() {
         this.jLabel15Rut.setText("");
         this.jLabel18Nombre.setText("");
@@ -445,6 +435,14 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         if ("".equals(this.jTextField8FechaNacimiento.getText().trim())) {
             this.jLabel14FechaNacimiento.setText("Campo Obligatorio.");
             errFechadeNacimiento = true;
+        } else {
+            
+            try {
+                Date dt = new Date(jTextField8FechaNacimiento.getText());
+            } catch (Exception e) {
+                this.jLabel14FechaNacimiento.setText("Debe ingresar una fecha valida (DD/MM/YYYY).");
+                errFechadeNacimiento = true;
+            }
         }
 
         // Sexo
