@@ -69,6 +69,7 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         jComboBox1Tarjetas = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         jLabel5NombreClienteMayor = new javax.swing.JLabel();
+        jLabel5ErrorGeneral = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -90,11 +91,19 @@ public class FormularioPrincipal extends javax.swing.JFrame {
 
         jLabel2.setText("ID Cliente:");
 
+        jLabel3IdCliente.setForeground(new java.awt.Color(255, 51, 51));
+
         jLabel4.setText("Cargo:");
+
+        jLabel5Cargo.setForeground(new java.awt.Color(255, 51, 51));
 
         jLabel6.setText("Ciudad:");
 
+        jLabel7Ciudad.setForeground(new java.awt.Color(255, 51, 51));
+
         jLabel8.setText("Tarjeta que Posee:");
+
+        jLabel9Tarjetas.setForeground(new java.awt.Color(255, 51, 51));
 
         jButton1.setText("Guardar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -105,16 +114,28 @@ public class FormularioPrincipal extends javax.swing.JFrame {
 
         jLabel10.setText("Apellido:");
 
+        jLabel11Apellido.setForeground(new java.awt.Color(255, 51, 51));
+
         jLabel12.setText("Fecha Nacimiento:");
         jLabel12.setToolTipText("");
 
         jLabel13.setText("Rut :");
 
+        jLabel14FechaNacimiento.setForeground(new java.awt.Color(255, 51, 51));
+
+        jLabel15Rut.setForeground(new java.awt.Color(255, 51, 51));
+
         jLabel16.setText("Sexo:");
 
         jLabel17.setText("Nombre :");
 
+        jLabel18Nombre.setForeground(new java.awt.Color(255, 51, 51));
+
+        jLabel19Sexo.setForeground(new java.awt.Color(255, 51, 51));
+
         jLabel20.setText("Estado Civil:");
+
+        jLabel22EstadoCivil.setForeground(new java.awt.Color(255, 51, 51));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -140,6 +161,9 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         jComboBox1Tarjetas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<< Seleccione >>", "Cuenta Rut", "Cuenta Corriente", "Cuenta de Ahorro", "Chequera Electronica", "Tarjeta de Credito", "Cuenta Vista", "Visa", "Mastercard" }));
 
         jLabel3.setText("El Cliente con mayor edad es:");
+
+        jLabel5ErrorGeneral.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        jLabel5ErrorGeneral.setForeground(new java.awt.Color(255, 51, 51));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -177,7 +201,7 @@ public class FormularioPrincipal extends javax.swing.JFrame {
                                                     .addComponent(jTextField7Apellido))))
                                         .addGap(192, 192, 192)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+                                            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 306, Short.MAX_VALUE)
                                             .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                     .addGroup(layout.createSequentialGroup()
@@ -209,24 +233,32 @@ public class FormularioPrincipal extends javax.swing.JFrame {
                                     .addComponent(jComboBox1Tarjetas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel18Nombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextField8FechaNacimiento)
-                                    .addComponent(jLabel14FechaNacimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel22EstadoCivil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextField2Cargo)
-                                    .addComponent(jLabel5Cargo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel9Tarjetas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-                                    .addComponent(jTextField6Nombre, javax.swing.GroupLayout.Alignment.LEADING))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 826, Short.MAX_VALUE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(jLabel18Nombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jTextField8FechaNacimiento)
+                                            .addComponent(jLabel14FechaNacimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel22EstadoCivil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jTextField2Cargo)
+                                            .addComponent(jLabel5Cargo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel9Tarjetas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+                                            .addComponent(jTextField6Nombre, javax.swing.GroupLayout.Alignment.LEADING)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(54, 54, 54)
+                                        .addComponent(jLabel5ErrorGeneral, javax.swing.GroupLayout.PREFERRED_SIZE, 615, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))))
                         .addGap(24, 24, 24))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel5ErrorGeneral, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -385,6 +417,7 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         this.jLabel5Cargo.setText("");
         this.jLabel7Ciudad.setText("");
         this.jLabel9Tarjetas.setText("");
+        this.jLabel5ErrorGeneral.setText("");
 
         this.jTextField5Rut.setText(jTextField5Rut.getText().trim());
         this.jTextField6Nombre.setText(jTextField6Nombre.getText().trim());
@@ -506,7 +539,9 @@ public class FormularioPrincipal extends javax.swing.JFrame {
             this.jLabel9Tarjetas.setText("Campo Obligatorio.");
             errTarjetaqueposee = true;
         }
-
+        if (errRut && errNombre && errApellido && errFechadeNacimiento && errEstadoCivil && errSexo && errIDCliente && errCargo && errCiudad && errTarjetaqueposee) {
+            this.jLabel5ErrorGeneral.setText("Se deben completar todos los campos del formulario.");
+        }
         return errRut || errNombre || errApellido || errFechadeNacimiento || errEstadoCivil || errSexo || errIDCliente || errCargo || errCiudad || errTarjetaqueposee;
     }
 
@@ -589,6 +624,7 @@ public class FormularioPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3IdCliente;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5Cargo;
+    private javax.swing.JLabel jLabel5ErrorGeneral;
     private javax.swing.JLabel jLabel5NombreClienteMayor;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7Ciudad;

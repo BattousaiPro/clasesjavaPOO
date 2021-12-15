@@ -85,7 +85,7 @@
                                       </Group>
                                       <EmptySpace min="192" pref="192" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel12" pref="300" max="32767" attributes="0"/>
+                                          <Component id="jLabel12" pref="306" max="32767" attributes="0"/>
                                           <Component id="jLabel17" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
                                           <Component id="jLabel20" max="32767" attributes="0"/>
                                       </Group>
@@ -130,17 +130,26 @@
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="jLabel18Nombre" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="jTextField8FechaNacimiento" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="jLabel14FechaNacimiento" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="jLabel22EstadoCivil" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="jTextField2Cargo" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="jLabel5Cargo" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="jLabel9Tarjetas" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="jButton1" alignment="1" pref="300" max="32767" attributes="0"/>
-                                  <Component id="jTextField6Nombre" alignment="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace pref="826" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="jLabel18Nombre" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="jTextField8FechaNacimiento" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="jLabel14FechaNacimiento" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="jLabel22EstadoCivil" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="jTextField2Cargo" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="jLabel5Cargo" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="jLabel9Tarjetas" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="jButton1" alignment="1" pref="300" max="32767" attributes="0"/>
+                                          <Component id="jTextField6Nombre" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                                      <Component id="jLabel5ErrorGeneral" min="-2" pref="615" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
@@ -154,7 +163,10 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jLabel1" max="32767" attributes="0"/>
+                  <Component id="jLabel5ErrorGeneral" max="32767" attributes="0"/>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
@@ -273,6 +285,11 @@
     <Component class="javax.swing.JTextField" name="jTextField1IdCliente">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3IdCliente">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
@@ -282,6 +299,11 @@
     <Component class="javax.swing.JTextField" name="jTextField2Cargo">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5Cargo">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
@@ -291,6 +313,11 @@
     <Component class="javax.swing.JTextField" name="jTextField3Ciudad">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7Ciudad">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
@@ -298,6 +325,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel9Tarjetas">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
@@ -313,6 +345,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel11Apellido">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField5Rut">
     </Component>
@@ -334,8 +371,18 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel14FechaNacimiento">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel15Rut">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel16">
       <Properties>
@@ -348,8 +395,18 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel18Nombre">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel19Sexo">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel20">
       <Properties>
@@ -357,6 +414,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel22EstadoCivil">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
       <AuxValues>
@@ -518,6 +580,16 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5NombreClienteMayor">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel5ErrorGeneral">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="3"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
