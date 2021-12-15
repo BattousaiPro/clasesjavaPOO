@@ -4,14 +4,13 @@
  */
 package robinsonbravo;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author Batto
- */
 public class FormularioPrincipal extends javax.swing.JFrame {
 
     /**
@@ -19,7 +18,7 @@ public class FormularioPrincipal extends javax.swing.JFrame {
      */
     public FormularioPrincipal() {
         initComponents();
-        this.cliList = new ArrayList<Cliente>();
+        this.cliList = new ArrayList<>();
     }
 
     /**
@@ -436,9 +435,22 @@ public class FormularioPrincipal extends javax.swing.JFrame {
             this.jLabel14FechaNacimiento.setText("Campo Obligatorio.");
             errFechadeNacimiento = true;
         } else {
-            
             try {
-                Date dt = new Date(jTextField8FechaNacimiento.getText());
+                // Date dt = new Date(jTextField8FechaNacimiento.getText());
+                String dateStr = jTextField8FechaNacimiento.getText();
+                SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+                Pattern datePattern = Pattern.compile("[0-9]{2}/[0-9]{2}/[0-9]{4}");
+                Matcher datePatternMatch = datePattern.matcher(dateStr);
+
+                boolean datePatternMatchfound = datePatternMatch.matches();
+                if (datePatternMatchfound) {
+                    sdf.setLenient(false);
+                    Date dt = sdf.parse(dateStr.trim());
+                } else {
+                    this.jLabel14FechaNacimiento.setText("Debe ingresar una fecha valida (DD/MM/YYYY).");
+                    errFechadeNacimiento = true;
+                }
+
             } catch (Exception e) {
                 this.jLabel14FechaNacimiento.setText("Debe ingresar una fecha valida (DD/MM/YYYY).");
                 errFechadeNacimiento = true;
