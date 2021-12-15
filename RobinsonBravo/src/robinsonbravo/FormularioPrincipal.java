@@ -65,7 +65,7 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         jTable2 = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
         jComboBox1EstadoCivil = new javax.swing.JComboBox<>();
-        jComboBox1Seco = new javax.swing.JComboBox<>();
+        jComboBox1Sexo = new javax.swing.JComboBox<>();
         jComboBox1Tarjetas = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         jLabel5NombreClienteMayor = new javax.swing.JLabel();
@@ -156,7 +156,7 @@ public class FormularioPrincipal extends javax.swing.JFrame {
 
         jComboBox1EstadoCivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<< Seleccione >>", "Soltero", "Casado", "Viudo", "Divorciado" }));
 
-        jComboBox1Seco.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<< Seleccione >>", "M", "F" }));
+        jComboBox1Sexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<< Seleccione >>", "M", "F" }));
 
         jComboBox1Tarjetas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<< Seleccione >>", "Cuenta Rut", "Cuenta Corriente", "Cuenta de Ahorro", "Chequera Electronica", "Tarjeta de Credito", "Cuenta Vista", "Visa", "Mastercard" }));
 
@@ -224,7 +224,7 @@ public class FormularioPrincipal extends javax.swing.JFrame {
                                             .addGroup(layout.createSequentialGroup()
                                                 .addGap(86, 86, 86)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(jComboBox1Seco, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jComboBox1Sexo, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addComponent(jLabel19Sexo, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                         .addGap(0, 0, Short.MAX_VALUE)))
                                 .addGap(18, 18, 18)
@@ -281,7 +281,7 @@ public class FormularioPrincipal extends javax.swing.JFrame {
                             .addComponent(jLabel16)
                             .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jComboBox1EstadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1Seco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jComboBox1Sexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(12, 12, 12)
                         .addComponent(jLabel19Sexo, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -356,7 +356,7 @@ public class FormularioPrincipal extends javax.swing.JFrame {
             cli.setApellido(jTextField7Apellido.getText());
             cli.setFecha_nacimiento(dt);
             cli.setEstadoCivil(this.jComboBox1EstadoCivil.getSelectedItem().toString());
-            cli.setSexo(this.jComboBox1Seco.getSelectedItem().toString());
+            cli.setSexo(this.jComboBox1Sexo.getSelectedItem().toString());
             cli.calcularEdad(jTextField8FechaNacimiento.getText());
             cliList.add(cli);
             this.clienteMayorEdad();
@@ -390,19 +390,23 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         this.jLabel18Nombre.setText("");
         this.jLabel11Apellido.setText("");
         this.jLabel14FechaNacimiento.setText("");
-        this.jLabel19Sexo.setText("");
-        this.jLabel22EstadoCivil.setText("");
+        this.jLabel19Sexo.setText("");//
+        this.jLabel22EstadoCivil.setText("");//
         this.jLabel3IdCliente.setText("");
         this.jLabel5Cargo.setText("");
         this.jLabel7Ciudad.setText("");
-        this.jLabel9Tarjetas.setText("");
+        this.jLabel9Tarjetas.setText("");//
+
         this.jTextField5Rut.setText("");
         this.jTextField6Nombre.setText("");
         this.jTextField7Apellido.setText("");
         this.jTextField8FechaNacimiento.setText("");
+        this.jComboBox1Sexo.setSelectedItem("<< Seleccione >>");
+        this.jComboBox1EstadoCivil.setSelectedItem("<< Seleccione >>");
         this.jTextField1IdCliente.setText("");
         this.jTextField2Cargo.setText("");
         this.jTextField3Ciudad.setText("");
+        this.jComboBox1Tarjetas.setSelectedItem("<< Seleccione >>");
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -455,12 +459,36 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         if ("".equals(this.jTextField6Nombre.getText().trim())) {
             this.jLabel18Nombre.setText("Campo Obligatorio.");
             errNombre = true;
+        } else {
+            String str = this.jTextField6Nombre.getText().trim();
+            boolean isNumeric = true;
+            for (int i = 0; i < str.length(); i++) {
+                if (Character.isDigit(str.charAt(i))) {
+                    isNumeric = false;
+                    break;
+                }
+            }
+            if (!isNumeric) {
+                this.jLabel18Nombre.setText("Campo no debe tener números.");
+            }
         }
 
         // Apellido
         if ("".equals(this.jTextField7Apellido.getText().trim())) {
             this.jLabel11Apellido.setText("Campo Obligatorio.");
             errApellido = true;
+        } else {
+            String str = this.jTextField7Apellido.getText().trim();
+            boolean isNumeric = true;
+            for (int i = 0; i < str.length(); i++) {
+                if (Character.isDigit(str.charAt(i))) {
+                    isNumeric = false;
+                    break;
+                }
+            }
+            if (!isNumeric) {
+                this.jLabel11Apellido.setText("Campo no debe tener números.");
+            }
         }
 
         // FechadeNacimiento
@@ -491,7 +519,7 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         }
 
         // Sexo
-        if ("<< Seleccione >>".equals(this.jComboBox1Seco.getSelectedItem().toString())) {
+        if ("<< Seleccione >>".equals(this.jComboBox1Sexo.getSelectedItem().toString())) {
             this.jLabel19Sexo.setText("Campo Obligatorio.");
             errEstadoCivil = true;
         }
@@ -604,7 +632,7 @@ public class FormularioPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1EstadoCivil;
-    private javax.swing.JComboBox<String> jComboBox1Seco;
+    private javax.swing.JComboBox<String> jComboBox1Sexo;
     private javax.swing.JComboBox<String> jComboBox1Tarjetas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
