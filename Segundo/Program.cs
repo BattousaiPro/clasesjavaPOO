@@ -8,54 +8,66 @@ namespace Segundo
 {
     internal class Program
     {
+
+        public static void crearMarcoDeAsteriscos()
+        {
+            int colum, fil, colum2, fil2;
+            for (colum = 1; colum < 23; colum++)
+            {
+                Console.SetCursorPosition(15, colum);
+                Console.Write("*");
+            }
+            for (colum2 = 1; colum2 < 23; colum2++)
+            {
+                Console.SetCursorPosition(60, colum2);
+                Console.Write("*");
+            }
+            for (fil = 16; fil < 60; fil++)
+            {
+                Console.SetCursorPosition(fil, 1);
+                Console.Write("*");
+            }
+            for (fil2 = 16; fil2 < 60; fil2++)
+            {
+                Console.SetCursorPosition(fil2, 22);
+                Console.Write("*");
+            }
+        }
+
+        public static int menuPrincipal()
+        {
+            int op = 0;
+            Console.SetCursorPosition(30, 3);
+            Console.WriteLine("MENU DE OPCIONES");
+            Console.SetCursorPosition(20, 6);
+            Console.WriteLine("1-Cálculo de edad");
+            Console.SetCursorPosition(20, 8);
+            Console.WriteLine("2-Masa Corporal IMC");
+            Console.SetCursorPosition(20, 10);
+            Console.WriteLine("3-Diguito Verificador de la Cédula");
+            Console.SetCursorPosition(20, 12);
+            Console.WriteLine("4-Conversor");
+            Console.SetCursorPosition(20, 14);
+            Console.WriteLine("5-Reemplazador de Letras");
+            Console.SetCursorPosition(20, 16);
+            Console.WriteLine("6-Salir");
+            Console.SetCursorPosition(35, 18);
+            Console.Write("Elija Una opción: ");
+            op = int.Parse(Console.ReadLine());
+            return op;
+        }
+
         static void Main(string[] args)
         {
-            int op = 0, colum, fil, colum2, fil2;
+            int op = 0;
             string can = "";
             int con = 0;
             while (can != "no")
             {
                 do
                 {
-
-                    for (colum = 1; colum < 23; colum++)
-                    {
-                        Console.SetCursorPosition(15, colum);
-                        Console.Write("*");
-                    }
-                    for (colum2 = 1; colum2 < 23; colum2++)
-                    {
-                        Console.SetCursorPosition(60, colum2);
-                        Console.Write("*");
-                    }
-                    for (fil = 16; fil < 60; fil++)
-                    {
-                        Console.SetCursorPosition(fil, 1);
-                        Console.Write("*");
-                    }
-                    for (fil2 = 16; fil2 < 60; fil2++)
-                    {
-                        Console.SetCursorPosition(fil2, 22);
-                        Console.Write("*");
-                    }
-
-                    Console.SetCursorPosition(30, 3);
-                    Console.WriteLine("MENU DE OPCIONES");
-                    Console.SetCursorPosition(20, 6);
-                    Console.WriteLine("1-Cálculo de edad");
-                    Console.SetCursorPosition(20, 8);
-                    Console.WriteLine("2-Masa Corporal IMC");
-                    Console.SetCursorPosition(20, 10);
-                    Console.WriteLine("3-Diguito Verificador de la Cédula");
-                    Console.SetCursorPosition(20, 12);
-                    Console.WriteLine("4-Conversor");
-                    Console.SetCursorPosition(20, 14);
-                    Console.WriteLine("5-Reemplazador de Letras");
-                    Console.SetCursorPosition(20, 16);
-                    Console.WriteLine("6-Salir");
-                    Console.SetCursorPosition(35, 18);
-                    Console.Write("Elija Una opción: ");
-                    op = int.Parse(Console.ReadLine());
+                    crearMarcoDeAsteriscos();
+                    op = menuPrincipal();
                     do
                     {
                         switch (op)
