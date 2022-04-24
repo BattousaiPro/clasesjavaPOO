@@ -57,6 +57,84 @@ namespace Segundo
             return op;
         }
 
+        private static void calcularEdad() {
+            int dian, mesn, añon, diac, mesac, añoac, diar, mesr, añor;
+            Console.Clear();
+            Console.SetCursorPosition(30, 3);
+            Console.WriteLine("Diguito Verificador de la Cédula");
+            Console.SetCursorPosition(20, 6);
+            Console.Write("Ingrese el día de su nacimiento: ");
+            dian = int.Parse(Console.ReadLine());
+            Console.SetCursorPosition(20, 8);
+            Console.Write("Ingrese el mes en el que nacio: ");
+            mesn = int.Parse(Console.ReadLine());
+            Console.SetCursorPosition(20, 10);
+            Console.Write("Ingrese el año de su nacimiento: ");
+            añon = int.Parse(Console.ReadLine());
+            Console.SetCursorPosition(20, 12);
+            Console.Write("Ingrese el dia actual: ");
+            diac = int.Parse(Console.ReadLine());
+            Console.SetCursorPosition(20, 14);
+            Console.Write("Ingrese el mes actual: ");
+            mesac = int.Parse(Console.ReadLine());
+            Console.SetCursorPosition(20, 16);
+            Console.Write("Ingrese el año actual: ");
+            añoac = int.Parse(Console.ReadLine());
+            //Condicion
+            if (dian != 0)
+            {
+                diac = diac + 30;
+                mesac = mesac - 1;
+            }
+            diar = diac - dian;
+            if (mesn != 0)
+            {
+                mesac = mesac + 12;
+                añoac = añoac - 1;
+            }
+            mesr = mesac - mesn;
+            añor = añoac - añon;
+            Console.SetCursorPosition(20, 20);
+            Console.Write("Tu edad actual es: {0} años, {1} meses, con {2} días.", añor, mesr, diar);
+        }
+
+
+        private static void calcularIMC() {
+            Console.Clear();
+            Double alt, peso, imc;
+            Console.SetCursorPosition(30, 3);
+            Console.Write("Indice de masa corporal (IMC)");
+            Console.SetCursorPosition(20, 6);
+            Console.Write("Ingrese tu estatura (Metros): ");
+            alt = Convert.ToDouble(Console.ReadLine());
+            Console.SetCursorPosition(20, 8);
+            Console.Write("Ingresa tu peso (kg): ");
+            peso = Convert.ToDouble(Console.ReadLine());
+            imc = peso / (alt * alt);
+            Console.SetCursorPosition(20, 14);
+            Console.Write("Su IMC es: {0}", imc);
+            Console.SetCursorPosition(20, 16);
+            if (alt != 0)
+            {
+                if (imc < 18)
+                {
+                    Console.Write(" Usted posee un bajo de lo normal, desnutrición");
+                }
+                else if (imc >= 18 && imc < 25)
+                {
+                    Console.Write("Usted posee un peso optimo, esta saludable");
+                }
+                else if (imc <= 25 && imc < 27)
+                {
+                    Console.Write(" Usted posee sobrepeso, advertencia");
+                }
+                else if (imc >= 27)
+                {
+                    Console.Write("Usted posee Obesidad, No esta nada saludable.");
+                }
+            }
+        }
+
         static void Main(string[] args)
         {
             int op = 0;
@@ -73,86 +151,13 @@ namespace Segundo
                         switch (op)
                         {
                             case 1:
-
-                                int dian, mesn, añon, diac, mesac, añoac, diar, mesr, añor;
-                                Console.Clear();
-                                Console.SetCursorPosition(30, 3);
-                                Console.WriteLine("Diguito Verificador de la Cédula");
-                                Console.SetCursorPosition(20, 6);
-                                Console.Write("Ingrese el día de su nacimiento: ");
-                                dian = int.Parse(Console.ReadLine());
-                                Console.SetCursorPosition(20, 8);
-                                Console.Write("Ingrese el mes en el que nacio: ");
-                                mesn = int.Parse(Console.ReadLine());
-                                Console.SetCursorPosition(20, 10);
-                                Console.Write("Ingrese el año de su nacimiento: ");
-                                añon = int.Parse(Console.ReadLine());
-                                Console.SetCursorPosition(20, 12);
-                                Console.Write("Ingrese el dia actual: ");
-                                diac = int.Parse(Console.ReadLine());
-                                Console.SetCursorPosition(20, 14);
-                                Console.Write("Ingrese el mes actual: ");
-                                mesac = int.Parse(Console.ReadLine());
-                                Console.SetCursorPosition(20, 16);
-                                Console.Write("Ingrese el año actual: ");
-                                añoac = int.Parse(Console.ReadLine());
-                                //Condicion
-                                if (dian != 0)
-                                {
-                                    diac = diac + 30;
-                                    mesac = mesac - 1;
-                                }
-                                diar = diac - dian;
-                                if (mesn != 0)
-                                {
-                                    mesac = mesac + 12;
-                                    añoac = añoac - 1;
-                                }
-                                mesr = mesac - mesn;
-                                añor = añoac - añon;
-                                Console.SetCursorPosition(20, 20);
-                                Console.Write("Tu edad actual es: {0} años, {1} meses, con {2} días.", añor, mesr, diar);
+                                calcularEdad();
                                 break;
                             case 2:
-                                Console.Clear();
-                                Double alt, peso, imc;
-                                Console.SetCursorPosition(30, 3);
-                                Console.Write("Indice de masa corporal (IMC)");
-                                Console.SetCursorPosition(20, 6);
-                                Console.Write("Ingrese tu estatura (Metros): ");
-                                alt = Convert.ToDouble(Console.ReadLine());
-                                Console.SetCursorPosition(20, 8);
-                                Console.Write("Ingresa tu peso (kg): ");
-                                peso = Convert.ToDouble(Console.ReadLine());
-                                imc = peso / (alt * alt);
-                                Console.SetCursorPosition(20, 14);
-                                Console.Write("Su IMC es: {0}", imc);
-                                Console.SetCursorPosition(20, 16);
-                                if (alt != 0)
-                                {
-                                    if (imc < 18)
-                                    {
-                                        Console.Write(" Usted posee un bajo de lo normal, desnutrición");
-                                    }
-                                    else if (imc >= 18 && imc < 25)
-                                    {
-                                        Console.Write("Usted posee un peso optimo, esta saludable");
-                                    }
-                                    else if (imc <= 25 && imc < 27)
-                                    {
-                                        Console.Write(" Usted posee sobrepeso, advertencia");
-                                    }
-                                    else if (imc >= 27)
-                                    {
-                                        Console.Write("Usted posee Obesidad, No esta nada saludable.");
-                                    }
-                                }
+                                calcularIMC();
                                 break;
                             case 6:
-                                if (op == 6)
-                                {
-                                    return;
-                                }
+                                return;
                                 break;
                             default:
                                 Console.Write(" solo se admiten numeros del 1 al 6, ingrese opcion correcta");
