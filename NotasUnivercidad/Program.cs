@@ -13,12 +13,15 @@ namespace NotasUnivercidad
 
             List<Ramo> list = new List<Ramo>();
             int cantidadRamos = 0;
+            int cantidadNotas = 0;
+            int posisionRamo = 0;
             Console.SetCursorPosition(30, 3);
             Console.WriteLine(" MENU DE OPCIONES ");
             Console.SetCursorPosition(20, 6);
             Console.WriteLine(" 1.- Cuantos Ramos Decea Ingresar  : ");
             cantidadRamos = int.Parse(Console.ReadLine());
 
+            // Cargar los namos que se solicitaron.
             for (int i = 0; i < cantidadRamos; i++)
             {
                 String inputNomRamo = "";
@@ -29,22 +32,49 @@ namespace NotasUnivercidad
                 list.Add(ramo);
             }
 
-            for (int i = 0; i < cantidadRamos; i++)
+            // Agregar notas a un ramos en especifico
+            Console.WriteLine("Ramos:");
+            for (int i = 0; i < list.Count; i++)
             {
-                Console.WriteLine("");
+                Console.WriteLine("["+(i+1)+"] -> " + list[i].NombreDeRamo);
+            }
+
+            posisionRamo = 0;
+            Console.WriteLine("Ingrese el número del ramo para ingrsar Notas.");
+            posisionRamo = int.Parse(Console.ReadLine());
+
+            int cantNotasingregar = 0;
+            Console.WriteLine("Cuantas nota quiere agregar?");
+            cantNotasingregar = int.Parse(Console.ReadLine());
+            
+
+            Console.WriteLine("Notas:");
+            for (int i = 0; i < cantNotasingregar; i++)
+            {
+                // Console.WriteLine("[" + (i + 1) + "] -> " + list[i].NombreDeRamo);
+                Double NotaIn = 0;
+                Console.WriteLine("Agregue Nota:[" + (i + 1) + " de "+ cantNotasingregar + "]");
+                NotaIn = Double.Parse(Console.ReadLine());
+                list[posisionRamo-1].agregarNota(NotaIn);
             }
 
 
 
 
+            Console.WriteLine("Recorrer list:");
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine("Nombre del Ramo:[" + (i + 1) + "]" + list[i].NombreDeRamo);
+                for (int j = 0; j < list[i].Notas.Count; j++)
+                {
+                    Console.WriteLine("nota:[" + (i + 1) + "]" + list[i].Notas[j]);
+
+                }
+
+            }
 
 
-
-
-
-
-
-
+            Console.ReadLine();
 
 
 
