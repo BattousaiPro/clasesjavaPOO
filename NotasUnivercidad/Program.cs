@@ -40,6 +40,7 @@ namespace NotasUnivercidad
                         break;
                     case 4:
                         Console.WriteLine(" OPCIÓN 4: ELIMINAR UN RAMO");
+                        eliminarRamos();
                         break;
                     case 5:
                         Console.WriteLine(" OPCIÓN 5: LISTAR RAMOS");
@@ -173,6 +174,14 @@ namespace NotasUnivercidad
                 listRamos.Add(ramo);
             }
         }
+        private static void eliminarRamos()
+        {
+            ListarRamos();
+            int indexRamo = 0;
+            Console.WriteLine("Que ramo quiere aliminar: ");
+            indexRamo = int.Parse(Console.ReadLine());
+            listRamos.RemoveAt(indexRamo);
+        }
 
         private static void ListarRamos()
         {
@@ -210,14 +219,14 @@ namespace NotasUnivercidad
             Console.WriteLine("Recorrer list:");
             for (int i = 0; i < listRamos.Count; i++)
             {
-                Console.WriteLine("Nombre del Ramo:[" + (i + 1) + "]" + listRamos[i].NombreDeRamo);
+                Console.WriteLine("Nombre del Ramo [" + (i + 1) + "]: " + listRamos[i].NombreDeRamo);
                 if (listRamos[i].Notas.Count > 0)
                 {
                     for (int j = 0; j < listRamos[i].Notas.Count; j++)
                     {
-                        Console.WriteLine("      Nota:[" + (i + 1) + "]" + listRamos[i].Notas[j]);
+                        Console.WriteLine("      Nota [" + (i + 1) + "]: " + listRamos[i].Notas[j]);
                     }
-                    Console.WriteLine("   Promedio:" + listRamos[i].Promedio);
+                    Console.WriteLine("   Promedio: " + listRamos[i].Promedio);
                 }
                 else {
                     Console.WriteLine("          Ramo no presenta Notas");
