@@ -178,9 +178,22 @@ namespace NotasUnivercidad
         {
             ListarRamos();
             int indexRamo = 0;
-            Console.WriteLine("Que ramo quiere aliminar: ");
+            Console.WriteLine("Que ramo quiere eliminar: ");
             indexRamo = int.Parse(Console.ReadLine());
-            listRamos.RemoveAt(indexRamo);
+            listRamos.RemoveAt(indexRamo - 1);
+        }
+
+        private static void modificarRamos()
+        {
+            ListarRamos();
+            int indexRamo = 0;
+            Console.WriteLine("Que ramo quiere modificar: ");
+            indexRamo = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Cual es el nombre a modificar del rao: ");
+            String nuevoNombreRamo = Console.ReadLine();
+
+            listRamos[indexRamo - 1].NombreDeRamo = nuevoNombreRamo;
         }
 
         private static void ListarRamos()
