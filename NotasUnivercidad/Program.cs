@@ -18,8 +18,15 @@ namespace NotasUnivercidad
             do
             {
                 can = "";
+                // Columna Izquierda.
+                crearMarcoDeAsteriscosVertical(1, 25, 15);
+                // Columna Derecha.
+                crearMarcoDeAsteriscosVertical(1, 25, 60);
+                // Fila Superior
+                crearMarcoDeAsteriscosHorizontal(16, 60, 1);
+                // Fila Inferior
+                crearMarcoDeAsteriscosHorizontal(16, 60, 24);
 
-                crearMarcoDeAsteriscosRamos(0,0,0,0);
                 op = menuPrincipal();
                 switch (op)
                 {
@@ -77,63 +84,6 @@ namespace NotasUnivercidad
 
         }
 
-        private static void crearMarcoDeAsteriscosRamos(int intColumna,int finColumnas, int intFilas, int finFilas)
-        {
-            int colum, fil, colum2, fil2;
-            // Columna Izquierda.
-            for (colum = 1; colum < 25; colum++)
-            {
-                Console.SetCursorPosition(15, colum);
-                Console.Write("*");
-            }
-            // Columna Derecha.
-            for (colum2 = 1; colum2 < 25; colum2++)
-            {
-                Console.SetCursorPosition(60, colum2);
-                Console.Write("*");
-            }
-            // Fila Superior
-            for (fil = 16; fil < 60; fil++)
-            {
-                Console.SetCursorPosition(fil, 1);
-                Console.Write("*");
-            }
-            // Fila Inferior
-            for (fil2 = 16; fil2 < 60; fil2++)
-            {
-                Console.SetCursorPosition(fil2, 24);
-                Console.Write("*");
-            }
-        }
-
-        private static void crearMarcoDeAsteriscosNotas(int intColumna, int finColumnas, int intFilas, int finFilas)
-        {
-            int colum, fil, colum2, fil2;
-            // Columna Izquierda.
-            for (colum = 1; colum < 23; colum++)
-            {
-                Console.SetCursorPosition(15, colum);
-                Console.Write("*");
-            }
-            // Columna Derecha.
-            for (colum2 = 1; colum2 < 23; colum2++)
-            {
-                Console.SetCursorPosition(60, colum2);
-                Console.Write("*");
-            }
-            // Fila Superior
-            for (fil = 16; fil < 60; fil++)
-            {
-                Console.SetCursorPosition(fil, 1);
-                Console.Write("*");
-            }
-            // Fila Inferior
-            for (fil2 = 16; fil2 < 60; fil2++)
-            {
-                Console.SetCursorPosition(fil2, 22);
-                Console.Write("*");
-            }
-        }
         public static int menuPrincipal()
         {
             int op = 0;
@@ -159,6 +109,26 @@ namespace NotasUnivercidad
             Console.Write("Elija Una opción: ");
             op = int.Parse(Console.ReadLine());
             return op;
+        }
+
+        private static void crearMarcoDeAsteriscosVertical(int intColumna, int finColumnas, int posicionCursor)
+        {
+            int colum;
+            for (colum = intColumna; colum < finColumnas; colum++)
+            {
+                Console.SetCursorPosition(posicionCursor, colum);
+                Console.Write("*");
+            }
+        }
+
+        private static void crearMarcoDeAsteriscosHorizontal(int intFilas, int finFilas, int posicionCursor)
+        {
+            int fil;
+            for (fil = intFilas; fil < finFilas; fil++)
+            {
+                Console.SetCursorPosition(fil, posicionCursor);
+                Console.Write("*");
+            }
         }
 
         private static void agregarRamos() {
@@ -302,7 +272,14 @@ namespace NotasUnivercidad
             do
             {
                 can = "";
-                crearMarcoDeAsteriscosNotas(0,0,0,0);
+                // Columna Izquierda.
+                crearMarcoDeAsteriscosVertical(1, 23, 15);
+                // Columna Derecha.
+                crearMarcoDeAsteriscosVertical(1, 23, 60);
+                // Fila Superior
+                crearMarcoDeAsteriscosHorizontal(16, 60, 1);
+                // Fila Inferior
+                crearMarcoDeAsteriscosHorizontal(16, 60, 22);
                 op = menuParaNotas();
                 switch (op)
                 {
