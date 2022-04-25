@@ -240,6 +240,7 @@ namespace NotasUnivercidad
                     {
                         Console.WriteLine("      Nota [" + (i + 1) + "]: " + listRamos[i].Notas[j]);
                     }
+                    listRamos[i].calcularPromedio();
                     Console.WriteLine("   Promedio: " + listRamos[i].Promedio);
                 }
                 else {
@@ -250,8 +251,14 @@ namespace NotasUnivercidad
 
         private static void loadInitData()
         {
+            
             Ramo ramo = new Ramo();
             ramo.NombreDeRamo = "Programación .net";
+            List<Double> notas = new List<Double>();
+            notas.Add(5);
+            notas.Add(5.5);
+            notas.Add(3.5);
+            ramo.Notas = notas;
             listRamos.Add(ramo);
             ramo = new Ramo();
             ramo.NombreDeRamo = "Desarrollo Dde Habilidades Cominicativas";
