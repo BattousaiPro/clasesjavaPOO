@@ -12,6 +12,7 @@ namespace NotasUnivercidad
 
         static void Main(string[] args)
         {
+            loadInitData();
             int op = 0;
             string can = "";
             do
@@ -216,17 +217,41 @@ namespace NotasUnivercidad
             Console.WriteLine("Recorrer list:");
             for (int i = 0; i < listRamos.Count; i++)
             {
-                //Console.SetCursorPosition(16, 3);
                 Console.WriteLine("Nombre del Ramo:[" + (i + 1) + "]" + listRamos[i].NombreDeRamo);
-                for (int j = 0; j < listRamos[i].Notas.Count; j++)
+                if (listRamos[i].Notas.Count > 0)
                 {
-                    //Console.SetCursorPosition(26, 3);
-                    Console.WriteLine("nota:[" + (i + 1) + "]" + listRamos[i].Notas[j]);
+                    for (int j = 0; j < listRamos[i].Notas.Count; j++)
+                    {
+                        Console.WriteLine("      Nota:[" + (i + 1) + "]" + listRamos[i].Notas[j]);
+                    }
+                    Console.WriteLine("   Promedio:" + listRamos[i].Promedio);
                 }
-                //Console.SetCursorPosition(16, 3);
-                Console.WriteLine("Promedio:" + listRamos[i].Promedio);
+                else {
+                    Console.WriteLine("          Ramo no presenta Notas");
+                }
             }
         }
 
+        private static void loadInitData()
+        {
+            Ramo ramo = new Ramo();
+            ramo.NombreDeRamo = "Programación .net";
+            listRamos.Add(ramo);
+            ramo = new Ramo();
+            ramo.NombreDeRamo = "Desarrollo Dde Habilidades Cominicativas";
+            listRamos.Add(ramo);
+            ramo = new Ramo();
+            ramo.NombreDeRamo = "Ética Profecional";
+            listRamos.Add(ramo);
+            ramo = new Ramo();
+            ramo.NombreDeRamo = "Patrones De Diseño";
+            listRamos.Add(ramo);
+            ramo = new Ramo();
+            ramo.NombreDeRamo = "Programación Web";
+            listRamos.Add(ramo);
+            ramo = new Ramo();
+            ramo.NombreDeRamo = "Sistema Operativo";
+            listRamos.Add(ramo);
+        }
     }
 }
