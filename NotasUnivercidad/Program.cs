@@ -17,19 +17,15 @@ namespace NotasUnivercidad
             string can = "";
             do
             {
-                int cantidadRamos = 0;
-                int cantidadNotas = 0;
                 can = "";
 
+                crearMarcoDeAsteriscosRamos(0,0,0,0);
                 op = menuPrincipal();
                 switch (op)
                 {
                     case 1:
-                        Console.WriteLine(" OPCIÓN 1: AGREGAR CANTIDAD DE RAMOS");
-                        Console.WriteLine(" 1.- Cuantos Ramos Decea Ingresar  : ");
-                        cantidadRamos = int.Parse(Console.ReadLine());
-
-                        agregarRamos(cantidadRamos);
+                        Console.WriteLine(" OPCIÓN 1: AGREGAR VARIOS DE RAMOS");
+                        agregarRamos();
                         break;
                     case 2:
                         Console.WriteLine(" OPCIÓN 2: AGREGAR UN RAMO");
@@ -52,26 +48,18 @@ namespace NotasUnivercidad
                         listarRamosConNotas();
                         break;
                     case 7:
+                        Console.Clear();
+                        Console.WriteLine(" OPCIÓN 7: AGREGAR NOTAS A UN RAMOS");
+                        agregarNotasALosRamos();
+                        break;
+                    case 8:
+                        Console.Clear();
                         return;
                         break;
                     default:
                         Console.Write(" solo se admiten numeros del 1 al 5, ingrese opcion correcta");
                         break;
                 }
-                /*
-                Console.SetCursorPosition(30, 3);
-                Console.WriteLine(" MENU DE OPCIONES ");
-                Console.SetCursorPosition(20, 6);
-                Console.WriteLine(" 1.- Cuantos Ramos Decea Ingresar  : ");
-                cantidadRamos = int.Parse(Console.ReadLine());
-
-                agregarRamos(cantidadRamos);
-                ListarRamos();
-                aregarNotasPorRamo();
-                listarRamosConNotas();
-
-                Console.ReadLine();
-                */
                 if (op <= 6)
                 {
                     Console.WriteLine("¿De nuevo? si/no: ");
@@ -79,71 +67,80 @@ namespace NotasUnivercidad
                     if ("si"==can || "SI"==can || "s"==can || "S"==can)
                     {
                         Console.Clear();
-                    } else if ("no"==can || "NO"==can || "n"==can || "N"==can)
+                    }
+                    else if ("no"==can || "NO"==can || "n"==can || "N"==can)
                     {
                         return;
                     }
                 }
             } while (!("no"==can || "NO" == can || "n" == can || "N" == can));
 
-            /*
-             int opcion;
-             Double opcion1;
-
-              //BufferedReader lector = new BufferedReader(new InputStreamReader(System.in));
-
-
-            do
-             {
-                 Console.SetCursorPosition(30, 3);
-                 Console.WriteLine(" MENU DE OPCIONES ");
-                 Console.SetCursorPosition(20, 6);
-                 Console.WriteLine(" 1.- Leer La Informacion De La Carga Estudiante : ");
-                 Console.SetCursorPosition(20, 8);
-                 Console.WriteLine(" 2.- Matricular  Las Materias Del Estudiante : ");
-                 Console.SetCursorPosition(20, 10);
-                 Console.WriteLine(" 3.- Eliminar  Las Materias Del Estudiante : ");
-                 Console.SetCursorPosition(20, 12);
-                 Console.WriteLine(" 4.- Agregar o Modificar Notas Del Estudiante : ");
-                 Console.SetCursorPosition(20, 14);
-                 Console.WriteLine(" 5.- Calcular El Promedio De Notas : ");
-                 Console.SetCursorPosition(20, 16);
-                 Console.WriteLine(" 6.- Calcular el promedio general de toda la institucion : ");
-                 Console.SetCursorPosition(20, 18);
-                 Console.WriteLine(" 7.- Salir T-T");
-                 Console.SetCursorPosition(35, 18);
-                 Console.Write(" Digite La Opción : ");
-                 opcion = int.Parse(Console.ReadLine());
-                 opcion1 = Double.Parse(Console.ReadLine());
-
-                 switch (opcion)
-                 {
-
-                     case 1: metodos.leerinformacion(); break;
-                     case 2: metodos.matricular_materias(); break;
-                     case 3: metodos.notas_docente(); break;
-                     case 4: metodos.promedio_estudiante(); break;
-                     case 5: metodos.promedio_institucion(); break;
-                     case 6: metodos.estudiante_nota_baja(); break;
-
-                     case 7: opcion = 7; break;
-                     case 8:
-                         Console.WriteLine(" 6.- Calcular elcion : {0}" , opcion1);
-                         break;
-
-                     default: break;
-                 }
-                 //Console.Clear();
-             } while (opcion != 7);*/
         }
 
+        private static void crearMarcoDeAsteriscosRamos(int intColumna,int finColumnas, int intFilas, int finFilas)
+        {
+            int colum, fil, colum2, fil2;
+            // Columna Izquierda.
+            for (colum = 1; colum < 25; colum++)
+            {
+                Console.SetCursorPosition(15, colum);
+                Console.Write("*");
+            }
+            // Columna Derecha.
+            for (colum2 = 1; colum2 < 25; colum2++)
+            {
+                Console.SetCursorPosition(60, colum2);
+                Console.Write("*");
+            }
+            // Fila Superior
+            for (fil = 16; fil < 60; fil++)
+            {
+                Console.SetCursorPosition(fil, 1);
+                Console.Write("*");
+            }
+            // Fila Inferior
+            for (fil2 = 16; fil2 < 60; fil2++)
+            {
+                Console.SetCursorPosition(fil2, 24);
+                Console.Write("*");
+            }
+        }
+
+        private static void crearMarcoDeAsteriscosNotas(int intColumna, int finColumnas, int intFilas, int finFilas)
+        {
+            int colum, fil, colum2, fil2;
+            // Columna Izquierda.
+            for (colum = 1; colum < 23; colum++)
+            {
+                Console.SetCursorPosition(15, colum);
+                Console.Write("*");
+            }
+            // Columna Derecha.
+            for (colum2 = 1; colum2 < 23; colum2++)
+            {
+                Console.SetCursorPosition(60, colum2);
+                Console.Write("*");
+            }
+            // Fila Superior
+            for (fil = 16; fil < 60; fil++)
+            {
+                Console.SetCursorPosition(fil, 1);
+                Console.Write("*");
+            }
+            // Fila Inferior
+            for (fil2 = 16; fil2 < 60; fil2++)
+            {
+                Console.SetCursorPosition(fil2, 22);
+                Console.Write("*");
+            }
+        }
         public static int menuPrincipal()
         {
             int op = 0;
             Console.SetCursorPosition(30, 3);
             Console.WriteLine("MENU DE OPCIONES RAMOS");
             Console.SetCursorPosition(20, 6);
-            Console.WriteLine("1-AGREGAR CANTIDAD DE RAMOS");
+            Console.WriteLine("1-AGREGAR VARIOS DE RAMOS");
             Console.SetCursorPosition(20, 8);
             Console.WriteLine("2-AGREGAR UN RAMO");
             Console.SetCursorPosition(20, 10);
@@ -155,15 +152,18 @@ namespace NotasUnivercidad
             Console.SetCursorPosition(20, 16);
             Console.WriteLine("6-LISTAR RAMOS CON NOTAS");
             Console.SetCursorPosition(20, 18);
-            Console.WriteLine("7-Salir");
-            Console.SetCursorPosition(35, 20);
+            Console.WriteLine("7-AGREGAR NOTAS A LOS RAMOS");
+            Console.SetCursorPosition(20, 20);
+            Console.WriteLine("8-Salir");
+            Console.SetCursorPosition(35, 22);
             Console.Write("Elija Una opción: ");
             op = int.Parse(Console.ReadLine());
             return op;
-
         }
 
-        private static void agregarRamos(int cantidadRamos) {
+        private static void agregarRamos() {
+            Console.WriteLine(" 1.- Cuantos Ramos Decea Ingresar  : ");
+            int cantidadRamos = int.Parse(Console.ReadLine());
             // Cargar los namos que se solicitaron.
             for (int i = 0; i < cantidadRamos; i++)
             {
@@ -175,6 +175,21 @@ namespace NotasUnivercidad
                 listRamos.Add(ramo);
             }
         }
+
+        private static void agregarRamos(int cantidadRamos)
+        {
+            // Cargar los namos que se solicitaron.
+            for (int i = 0; i < cantidadRamos; i++)
+            {
+                String inputNomRamo = "";
+                Console.WriteLine("Agregue nombre nuevo para el ramo: ");
+                inputNomRamo = Console.ReadLine();
+                Ramo ramo = new Ramo();
+                ramo.NombreDeRamo = inputNomRamo;
+                listRamos.Add(ramo);
+            }
+        }
+
         private static void eliminarRamos()
         {
             ListarRamos();
@@ -233,6 +248,7 @@ namespace NotasUnivercidad
             Console.WriteLine("Recorrer list:");
             for (int i = 0; i < listRamos.Count; i++)
             {
+                Console.WriteLine("");
                 Console.WriteLine("Nombre del Ramo [" + (i + 1) + "]: " + listRamos[i].NombreDeRamo);
                 if (listRamos[i].Notas.Count > 0)
                 {
@@ -249,6 +265,165 @@ namespace NotasUnivercidad
             }
         }
 
+        // Metodos para la carga de notas
+        public static int menuParaNotas()
+        {
+            int op = 0;
+            Console.SetCursorPosition(30, 3);
+            Console.WriteLine("MENU DE OPCIONES PARA NOTAS");
+            Console.SetCursorPosition(20, 6);
+            Console.WriteLine("1-AGREGAR VARIAS NOTAS");
+            Console.SetCursorPosition(20, 8);
+            Console.WriteLine("2-AGREGAR UNA NOTA");
+            Console.SetCursorPosition(20, 10);
+            Console.WriteLine("3-MODIFICAR NOTAS");
+            Console.SetCursorPosition(20, 12);
+            Console.WriteLine("4-ELIMINAR UNA NOTA");
+            Console.SetCursorPosition(20, 14);
+            Console.WriteLine("5-LISTAR NOTAS");
+            Console.SetCursorPosition(20, 16);
+            Console.WriteLine("6-MOSTRAR PROMEDIO");
+            Console.SetCursorPosition(20, 18);
+            Console.WriteLine("7-Salir");
+            Console.SetCursorPosition(35, 20);
+            Console.Write("Elija Una opción: ");
+            op = int.Parse(Console.ReadLine());
+            return op;
+        }
+
+        private static void agregarNotasALosRamos() {
+            int indexRamo = 0;
+            ListarRamos();
+            Console.WriteLine("A QUE RAMO LE QUIERE AGREGAR NOTAS: ");
+            indexRamo = int.Parse(Console.ReadLine());
+            Console.Clear();
+            int op = 0;
+            string can = "";
+            do
+            {
+                can = "";
+                crearMarcoDeAsteriscosNotas(0,0,0,0);
+                op = menuParaNotas();
+                switch (op)
+                {
+                    case 1:
+                        Console.WriteLine(" OPCIÓN 1: AGREGAR VARIAS NOTAS");
+                        agregarNotas(indexRamo);
+                        break;
+                    case 2:
+                        Console.WriteLine(" OPCIÓN 2: AGREGAR UN RAMO");
+                        agregarNotas(indexRamo, 1);
+                        break;
+                    case 3:
+                        Console.WriteLine(" OPCIÓN 3: MODIFICAR UN RAMO");
+                        modificarNota(indexRamo);
+                        break;
+                    case 4:
+                        Console.WriteLine(" OPCIÓN 4: ELIMINAR UN RAMO");
+                        eliminarNota(indexRamo);
+                        break;
+                    case 5:
+                        Console.WriteLine(" OPCIÓN 5: LISTAR RAMOS");
+                        listarNotas(indexRamo);
+                        break;
+                    case 6:
+                        Console.WriteLine(" OPCIÓN 6: MOSTRAR PROMEDIO");
+                        //ListarNotas(indexRamo);
+                        mostrarPromedio(indexRamo);
+                        break;
+                    case 7:
+                        Console.Clear();
+                        return;
+                        break;
+                    default:
+                        Console.Write(" solo se admiten numeros del 1 al 5, ingrese opcion correcta");
+                        break;
+                }
+                if (op <= 6)
+                {
+                    Console.WriteLine("¿volver a los ramos? si/no: ");
+                    can = Console.ReadLine();
+                    if ("si" == can || "SI" == can || "s" == can || "S" == can)
+                    {
+                        Console.Clear();
+                    }
+                    else if ("no" == can || "NO" == can || "n" == can || "N" == can)
+                    {
+                        return;
+                    }
+                }
+            } while (!("no" == can || "NO" == can || "n" == can || "N" == can));
+        }
+
+        private static void agregarNotas(int indexNotas)
+        {
+            Console.WriteLine(" 1.- Cuants Notas Decea Ingresar  : ");
+            int cantidadNotas = int.Parse(Console.ReadLine());
+            // Cargar los namos que se solicitaron.
+            for (int i = 0; i < cantidadNotas; i++)
+            {
+                Console.WriteLine("Agregue nota [" + (i + 1) + " de " + cantidadNotas + "]:");
+                Double inputNota = Double.Parse(Console.ReadLine());
+                listRamos[indexNotas - 1].agregarNota(inputNota);
+            }
+        }
+
+        private static void agregarNotas(int indexNotas, int cantidadNotas)
+        {
+            // Cargar los namos que se solicitaron.
+            for (int i = 0; i < cantidadNotas; i++)
+            {
+                Console.WriteLine("Agregue nota [" + ( i + 1 ) + " de " + cantidadNotas + "]:");
+                Double inputNota = Double.Parse(Console.ReadLine());
+                listRamos[indexNotas - 1].agregarNota(inputNota);
+            }
+        }
+
+        private static void listarNotas(int indexNotas)
+        {
+            Console.WriteLine("");
+            if (listRamos[indexNotas - 1].Notas.Count > 0)
+            {
+                Console.WriteLine("Notas:");
+                for (int i = 0; i < listRamos[indexNotas - 1].Notas.Count; i++)
+                {
+                    Console.WriteLine("[" + (i + 1) + "] -> " + listRamos[indexNotas - 1].Notas[i]);
+                }
+            }
+            else
+            {
+                Console.WriteLine("No presena Notas");
+            }
+        }
+
+        private static void eliminarNota(int indexNotas)
+        {
+            listarNotas(indexNotas);
+            int indexNota = 0;
+            Console.WriteLine("Que nota quiere eliminar: ");
+            indexNota = int.Parse(Console.ReadLine());
+            listRamos[indexNotas - 1].Notas.RemoveAt(indexNota - 1);
+        }
+
+        private static void modificarNota(int indexNotas)
+        {
+            listarNotas(indexNotas);
+            int indexNota = 0;
+            Console.WriteLine("Que nota quiere modificar: ");
+            indexNota = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Cual es la nota a modificar: ");
+            Double nuevaNota = Double.Parse(Console.ReadLine());
+
+            listRamos[indexNotas - 1].Notas[indexNota - 1] = nuevaNota;
+        }
+
+        private static void mostrarPromedio(int indexNotas) {
+            Console.WriteLine("El promedio de " + listRamos[indexNotas - 1].NombreDeRamo + " es: ");
+            Console.WriteLine("  -----> " + listRamos[indexNotas - 1].Promedio);
+        }
+
+        // Fin Metodos para la carga de notas
         private static void loadInitData()
         {
             
