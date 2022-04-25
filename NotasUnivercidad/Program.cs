@@ -79,6 +79,7 @@ namespace NotasUnivercidad
                         Console.Clear();
                     } else if ("no"==can || "NO"==can || "n"==can || "N"==can)
                     {
+                        return;
                     }
                 }
             } while (!("no"==can || "NO" == can || "n" == can || "N" == can));
