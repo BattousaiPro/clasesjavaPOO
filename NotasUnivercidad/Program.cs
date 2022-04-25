@@ -12,25 +12,86 @@ namespace NotasUnivercidad
 
         static void Main(string[] args)
         {
+            int op = 0;
+            string can = "";
+            do
+            {
+                int cantidadRamos = 0;
+                int cantidadNotas = 0;
+                can = "";
 
-            int cantidadRamos = 0;
-            int cantidadNotas = 0;
-            
-            Console.SetCursorPosition(30, 3);
-            Console.WriteLine(" MENU DE OPCIONES ");
-            Console.SetCursorPosition(20, 6);
-            Console.WriteLine(" 1.- Cuantos Ramos Decea Ingresar  : ");
-            cantidadRamos = int.Parse(Console.ReadLine());
+                op = menuPrincipal();
+                switch (op)
+                {
+                    case 1:
+                        Console.WriteLine(" OPCIÓN 1: AGREGAR CANTIDAD DE RAMOS");
+                        Console.WriteLine(" 1.- Cuantos Ramos Decea Ingresar  : ");
+                        cantidadRamos = int.Parse(Console.ReadLine());
 
-            agregarRamos(cantidadRamos);
-            ListarRamos();
-            aregarNotasPorRamo();
-            listarRamosConNotas();
+                        agregarRamos(cantidadRamos);
+                        break;
+                    case 2:
+                        Console.WriteLine(" OPCIÓN 2: AGREGAR UN RAMO");
+                        agregarRamos(1);
+                        break;
+                    case 3:
+                        Console.WriteLine(" OPCIÓN 3: MODIFICAR UN RAMO");
+                        break;
+                    case 4:
+                        Console.WriteLine(" OPCIÓN 4: ELIMINAR UN RAMO");
+                        break;
+                    case 5:
+                        Console.WriteLine(" OPCIÓN 5: LISTAR RAMOS");
+                        ListarRamos();
+                        break;
+                    case 6:
+                        Console.WriteLine(" OPCIÓN 6: LISTAR RAMOS CON NOTAS");
+                        listarRamosConNotas();
+                        break;
+                    case 7:
+                        return;
+                        break;
+                    default:
+                        Console.Write(" solo se admiten numeros del 1 al 5, ingrese opcion correcta");
+                        break;
+                }
+                /*
+                Console.SetCursorPosition(30, 3);
+                Console.WriteLine(" MENU DE OPCIONES ");
+                Console.SetCursorPosition(20, 6);
+                Console.WriteLine(" 1.- Cuantos Ramos Decea Ingresar  : ");
+                cantidadRamos = int.Parse(Console.ReadLine());
 
-            Console.ReadLine();
+                agregarRamos(cantidadRamos);
+                ListarRamos();
+                aregarNotasPorRamo();
+                listarRamosConNotas();
 
+                Console.ReadLine();
+                */
+                if (op <= 6)
+                {
+                    Console.WriteLine("¿De nuevo? si/no: ");
+                    can = Console.ReadLine();
 
-            /* int opcion;
+                    Console.WriteLine("El valor del can: " + can);
+                    
+                    if ("si"==can || "SI"==can || "s"==can || "S"==can)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("siiiiiii ");
+                    } else if ("no"==can || "NO"==can || "n"==can || "N"==can)
+                    {
+                        Console.WriteLine("nooooooo ");
+                        //return;
+                    }
+                    Console.WriteLine("can -> " + can );
+                    // Console.ReadLine();
+                }
+            } while (!("no"==can || "NO" == can || "n" == can || "N" == can));
+
+            /*
+             int opcion;
              Double opcion1;
 
               //BufferedReader lector = new BufferedReader(new InputStreamReader(System.in));
@@ -78,6 +139,32 @@ namespace NotasUnivercidad
                  }
                  //Console.Clear();
              } while (opcion != 7);*/
+        }
+
+        public static int menuPrincipal()
+        {
+            int op = 0;
+            Console.SetCursorPosition(30, 3);
+            Console.WriteLine("MENU DE OPCIONES RAMOS");
+            Console.SetCursorPosition(20, 6);
+            Console.WriteLine("1-AGREGAR CANTIDAD DE RAMOS");
+            Console.SetCursorPosition(20, 8);
+            Console.WriteLine("2-AGREGAR UN RAMO");
+            Console.SetCursorPosition(20, 10);
+            Console.WriteLine("3-MODIFICAR UN RAMO");
+            Console.SetCursorPosition(20, 12);
+            Console.WriteLine("4-ELIMINAR UN RAMO");
+            Console.SetCursorPosition(20, 14);
+            Console.WriteLine("5-LISTAR RAMOS");
+            Console.SetCursorPosition(20, 16);
+            Console.WriteLine("6-LISTAR RAMOS CON NOTAS");
+            Console.SetCursorPosition(20, 18);
+            Console.WriteLine("7-Salir");
+            Console.SetCursorPosition(35, 20);
+            Console.Write("Elija Una opción: ");
+            op = int.Parse(Console.ReadLine());
+            return op;
+
         }
 
         private static void agregarRamos(int cantidadRamos) {
