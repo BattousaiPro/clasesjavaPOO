@@ -37,6 +37,7 @@ namespace NotasUnivercidad
                         break;
                     case 3:
                         Console.WriteLine(" OPCIÓN 3: MODIFICAR UN RAMO");
+                        modificarRamos();
                         break;
                     case 4:
                         Console.WriteLine(" OPCIÓN 4: ELIMINAR UN RAMO");
