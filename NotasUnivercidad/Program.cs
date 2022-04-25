@@ -284,7 +284,7 @@ namespace NotasUnivercidad
             Console.SetCursorPosition(20, 16);
             Console.WriteLine("6-MOSTRAR PROMEDIO");
             Console.SetCursorPosition(20, 18);
-            Console.WriteLine("7-Salir");
+            Console.WriteLine("7-Volver al menú de Ramos");
             Console.SetCursorPosition(35, 20);
             Console.Write("Elija Una opción: ");
             op = int.Parse(Console.ReadLine());
