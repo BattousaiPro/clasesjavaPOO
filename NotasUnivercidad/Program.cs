@@ -74,20 +74,12 @@ namespace NotasUnivercidad
                 {
                     Console.WriteLine("¿De nuevo? si/no: ");
                     can = Console.ReadLine();
-
-                    Console.WriteLine("El valor del can: " + can);
-                    
                     if ("si"==can || "SI"==can || "s"==can || "S"==can)
                     {
                         Console.Clear();
-                        Console.WriteLine("siiiiiii ");
                     } else if ("no"==can || "NO"==can || "n"==can || "N"==can)
                     {
-                        Console.WriteLine("nooooooo ");
-                        //return;
                     }
-                    Console.WriteLine("can -> " + can );
-                    // Console.ReadLine();
                 }
             } while (!("no"==can || "NO" == can || "n" == can || "N" == can));
 
