@@ -85,6 +85,10 @@ namespace NotasUnivercidad
                     {
                         return;
                     }
+                    else
+                    {
+                        return;
+                    }
                 }
             } while (!("no"==can || "NO" == can || "n" == can || "N" == can));
 
@@ -338,6 +342,9 @@ namespace NotasUnivercidad
                     }
                     else if ("no" == can || "NO" == can || "n" == can || "N" == can)
                     {
+                        return;
+                    }
+                    else {
                         return;
                     }
                 }
