@@ -31,26 +31,32 @@ namespace NotasUnivercidad
                 switch (op)
                 {
                     case 1:
+                        Console.Clear();
                         Console.WriteLine(" OPCIÓN 1: AGREGAR VARIOS DE RAMOS");
                         agregarRamos();
                         break;
                     case 2:
+                        Console.Clear();
                         Console.WriteLine(" OPCIÓN 2: AGREGAR UN RAMO");
                         agregarRamos(1);
                         break;
                     case 3:
+                        Console.Clear();
                         Console.WriteLine(" OPCIÓN 3: MODIFICAR UN RAMO");
                         modificarRamos();
                         break;
                     case 4:
+                        Console.Clear();
                         Console.WriteLine(" OPCIÓN 4: ELIMINAR UN RAMO");
                         eliminarRamos();
                         break;
                     case 5:
+                        Console.Clear();
                         Console.WriteLine(" OPCIÓN 5: LISTAR RAMOS");
                         ListarRamos();
                         break;
                     case 6:
+                        Console.Clear();
                         Console.WriteLine(" OPCIÓN 6: LISTAR RAMOS CON NOTAS");
                         listarRamosConNotas();
                         break;
@@ -284,26 +290,32 @@ namespace NotasUnivercidad
                 switch (op)
                 {
                     case 1:
+                        Console.Clear();
                         Console.WriteLine(" OPCIÓN 1: AGREGAR VARIAS NOTAS");
                         agregarNotas(indexRamo);
                         break;
                     case 2:
+                        Console.Clear();
                         Console.WriteLine(" OPCIÓN 2: AGREGAR UN RAMO");
                         agregarNotas(indexRamo, 1);
                         break;
                     case 3:
+                        Console.Clear();
                         Console.WriteLine(" OPCIÓN 3: MODIFICAR UN RAMO");
                         modificarNota(indexRamo);
                         break;
                     case 4:
+                        Console.Clear();
                         Console.WriteLine(" OPCIÓN 4: ELIMINAR UN RAMO");
                         eliminarNota(indexRamo);
                         break;
                     case 5:
+                        Console.Clear();
                         Console.WriteLine(" OPCIÓN 5: LISTAR RAMOS");
                         listarNotas(indexRamo);
                         break;
                     case 6:
+                        Console.Clear();
                         Console.WriteLine(" OPCIÓN 6: MOSTRAR PROMEDIO");
                         //ListarNotas(indexRamo);
                         mostrarPromedio(indexRamo);
