@@ -226,22 +226,24 @@ namespace NotasUnivercidad
         private static void listarRamosConNotas()
         {
             Console.WriteLine("Recorrer list:");
-            for (int i = 0; i < listRamos.Count; i++)
-            {
+            int index = 1;
+            foreach (Ramo ram in listRamos) {
                 Console.WriteLine("");
-                Console.WriteLine("Nombre del Ramo [" + (i + 1) + "]: " + listRamos[i].NombreDeRamo);
-                if (listRamos[i].Notas.Count > 0)
+                Console.WriteLine("Nombre del Ramo [" + index + "]: " + ram.NombreDeRamo);
+                if (ram.Notas.Count > 0)
                 {
-                    for (int j = 0; j < listRamos[i].Notas.Count; j++)
+                    for (int j = 0; j < ram.Notas.Count; j++)
                     {
-                        Console.WriteLine("      Nota [" + (i + 1) + "]: " + listRamos[i].Notas[j]);
+                        Console.WriteLine("      Nota [" + index + "]: " + ram.Notas[j]);
                     }
-                    listRamos[i].calcularPromedio();
-                    Console.WriteLine("   Promedio: " + listRamos[i].Promedio);
+                    ram.calcularPromedio();
+                    Console.WriteLine("   Promedio: " + ram.Promedio);
                 }
-                else {
+                else
+                {
                     Console.WriteLine("          Ramo no presenta Notas");
                 }
+                index++;
             }
         }
 
