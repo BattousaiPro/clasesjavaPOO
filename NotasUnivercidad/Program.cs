@@ -187,7 +187,7 @@ namespace NotasUnivercidad
             Console.WriteLine("Que ramo quiere modificar: ");
             indexRamo = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Cual es el nombre a modificar del rao: ");
+            Console.WriteLine("Cual es el nombre a modificar del ramo: ");
             String nuevoNombreRamo = Console.ReadLine();
 
             listRamos[indexRamo - 1].NombreDeRamo = nuevoNombreRamo;
@@ -199,28 +199,6 @@ namespace NotasUnivercidad
             for (int i = 0; i < listRamos.Count; i++)
             {
                 Console.WriteLine("[" + (i + 1) + "] -> " + listRamos[i].NombreDeRamo);
-            }
-        }
-
-        private static void aregarNotasPorRamo()
-        {
-            int posisionRamo = 0;
-            Console.WriteLine("Ingrese el número del ramo para ingrsar Notas.");
-            posisionRamo = int.Parse(Console.ReadLine());
-
-            int cantNotasingregar = 0;
-            Console.WriteLine("Cuantas nota quiere agregar?");
-            cantNotasingregar = int.Parse(Console.ReadLine());
-
-
-            Console.WriteLine("Notas:");
-            for (int i = 0; i < cantNotasingregar; i++)
-            {
-
-                Double NotaIn = 0;
-                Console.WriteLine("Agregue Nota:[" + (i + 1) + " de " + cantNotasingregar + "]");
-                NotaIn = Double.Parse(Console.ReadLine());
-                listRamos[posisionRamo - 1].agregarNota(NotaIn);
             }
         }
 
