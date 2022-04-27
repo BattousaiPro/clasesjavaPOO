@@ -17,6 +17,7 @@ namespace NotasUnivercidad
             string can = "";
             do
             {
+                Console.Clear();
                 can = "";
                 // Columna Izquierda.
                 crearMarcoDeAsteriscosVertical(1, 25, 15);
@@ -283,6 +284,7 @@ namespace NotasUnivercidad
             string can = "";
             do
             {
+                Console.Clear();
                 can = "";
                 // Columna Izquierda.
                 crearMarcoDeAsteriscosVertical(1, 23, 15);
