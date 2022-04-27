@@ -71,7 +71,7 @@ namespace NotasUnivercidad
                         return;
                         break;
                     default:
-                        Console.Write(" solo se admiten numeros del 1 al 5, ingrese opcion correcta");
+                        Console.Write(" solo se admiten numeros del 1 al 8, ingrese opcion correcta");
                         break;
                 }
                 if (op <= 6)
@@ -333,7 +333,7 @@ namespace NotasUnivercidad
                         return;
                         break;
                     default:
-                        Console.Write(" solo se admiten numeros del 1 al 5, ingrese opcion correcta");
+                        Console.Write(" solo se admiten numeros del 1 al 7, ingrese opcion correcta");
                         break;
                 }
                 if (op <= 6)
