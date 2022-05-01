@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NotasUnivercidad
 {
+
     internal class Ramo
     {
         private String nombreDeRamo;
         private List<Double> notas;
         private Double promedio;
-
-        public Ramo() {
+        public Ramo()
+        {
             this.Notas = new List<Double>();
         }
 
@@ -34,24 +32,29 @@ namespace NotasUnivercidad
             set { promedio = value; }  // set method
         }
 
-        public void agregarNota(Double nota) {
+        public void agregarNota(Double nota)
+        {
             this.Notas.Add(nota);
             calcularPromedio();
         }
 
-        public void actualizarNota(int index, Double nota) {
+        public void actualizarNota(int index, Double nota)
+        {
             this.Notas[index] = nota;
             calcularPromedio();
         }
 
-        public void eliminarNota(int index) {
+        public void eliminarNota(int index)
+        {
             this.Notas.RemoveAt(index);
             calcularPromedio();
         }
 
-        public void calcularPromedio() {
+        public void calcularPromedio()
+        {
             Double prom = 0.0;
-            if (notas.Count > 0) {
+            if (notas.Count > 0)
+            {
                 for (int i = 0; i < this.Notas.Count; i++)
                 {
                     prom = prom + notas[i];

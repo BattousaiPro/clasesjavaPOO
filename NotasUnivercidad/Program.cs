@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace NotasUnivercidad
 {
@@ -78,11 +76,11 @@ namespace NotasUnivercidad
                 {
                     Console.WriteLine("¿De nuevo? si/no: ");
                     can = Console.ReadLine();
-                    if ("si"==can || "SI"==can || "s"==can || "S"==can)
+                    if ("si" == can || "SI" == can || "s" == can || "S" == can)
                     {
                         Console.Clear();
                     }
-                    else if ("no"==can || "NO"==can || "n"==can || "N"==can)
+                    else if ("no" == can || "NO" == can || "n" == can || "N" == can)
                     {
                         return;
                     }
@@ -91,7 +89,7 @@ namespace NotasUnivercidad
                         return;
                     }
                 }
-            } while (!("no"==can || "NO" == can || "n" == can || "N" == can));
+            } while (!("no" == can || "NO" == can || "n" == can || "N" == can));
 
         }
 
@@ -142,7 +140,8 @@ namespace NotasUnivercidad
             }
         }
 
-        private static void agregarRamos() {
+        private static void agregarRamos()
+        {
             Console.WriteLine(" 1.- Cuantos Ramos Decea Ingresar  : ");
             int cantidadRamos = int.Parse(Console.ReadLine());
             // Cargar los namos que se solicitaron.
@@ -206,7 +205,8 @@ namespace NotasUnivercidad
         {
             Console.WriteLine("Recorrer list:");
             int index = 1;
-            foreach (Ramo ram in listRamos) {
+            foreach (Ramo ram in listRamos)
+            {
                 Console.WriteLine("");
                 Console.WriteLine("Nombre del Ramo [" + index + "]: " + ram.NombreDeRamo);
                 if (ram.Notas.Count > 0)
@@ -252,7 +252,8 @@ namespace NotasUnivercidad
             return op;
         }
 
-        private static void agregarNotasALosRamos() {
+        private static void agregarNotasALosRamos()
+        {
             int indexRamo = 0;
             ListarRamos();
             Console.WriteLine("A QUE RAMO LE QUIERE AGREGAR NOTAS: ");
@@ -326,7 +327,8 @@ namespace NotasUnivercidad
                     {
                         return;
                     }
-                    else {
+                    else
+                    {
                         return;
                     }
                 }
@@ -351,7 +353,7 @@ namespace NotasUnivercidad
             // Cargar los namos que se solicitaron.
             for (int i = 0; i < cantidadNotas; i++)
             {
-                Console.WriteLine("Agregue nota [" + ( i + 1 ) + " de " + cantidadNotas + "]:");
+                Console.WriteLine("Agregue nota [" + (i + 1) + " de " + cantidadNotas + "]:");
                 Double inputNota = Double.Parse(Console.ReadLine());
                 listRamos[indexNotas - 1].agregarNota(inputNota);
             }
@@ -396,7 +398,8 @@ namespace NotasUnivercidad
             listRamos[indexNotas - 1].Notas[indexNota - 1] = nuevaNota;
         }
 
-        private static void mostrarPromedio(int indexNotas) {
+        private static void mostrarPromedio(int indexNotas)
+        {
             Console.WriteLine("El promedio de " + listRamos[indexNotas - 1].NombreDeRamo + " es: ");
             Console.WriteLine("  -----> " + listRamos[indexNotas - 1].Promedio);
         }
@@ -404,7 +407,6 @@ namespace NotasUnivercidad
         // Fin Metodos para la carga de notas
         private static void loadInitData()
         {
-            
             Ramo ramo = new Ramo();
             ramo.NombreDeRamo = "Programación .net";
             List<Double> notas = new List<Double>();
@@ -429,5 +431,75 @@ namespace NotasUnivercidad
             ramo.NombreDeRamo = "Sistema Operativo";
             listRamos.Add(ramo);
         }
+
+        public string[] arreglo()
+        {
+            string[] arregloRamo = new string[100];
+            try
+            {
+                StreamReader Lectura;  // Se declara la variable lectura de Tipo Lector de archivos
+                string cadena; // se declara la variable cadena que contendra los elementos del archivo
+                int contador = 1;  // contador de los elementos de la lista
+                Lectura = File.OpenText("Ramo.txt");  // lectura del archivo ramos.txt
+                cadena = Lectura.ReadLine();  // se lee la primera linea del archivo y se alamacena en la variable cadena
+                while (cadena != null)  //  ciclo repetitivo que recorre el archvo mientras su valor sea diferente a nulo
+                {
+                    Console.WriteLine(cadena + "----- " + (contador));  // se imprime en pantalla cada elemento del archivo
+                    arregloRamo[contador] = cadena;
+                    cadena = Lectura.ReadLine(); // se lee la siguiente linea del archivo
+
+                    contador++;  // se incrementa la posición de la lectura del archivo
+                }
+                Lectura.Close();  // se cierra el lector del archivo   
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e.Message);
+            }
+            return arregloRamo;
+        }
+
+        public void borrar(string ramo)
+        {
+            try
+            {
+                StreamReader Lectura;
+                StreamWriter temporal;
+                string cadena;
+                bool encontrado = false;
+                Lectura = File.OpenText("Ramo.txt");
+                temporal = File.CreateText("temp.txt");
+                cadena = Lectura.ReadLine();
+                string respuesta = null;
+                while (cadena != null)
+                {
+                    if (cadena.Equals(ramo))
+                    {
+                        encontrado = true;
+                        Console.WriteLine("Ramo:" + cadena);
+                        respuesta = Console.ReadLine().ToUpper();
+                        if (!respuesta.Equals("SI"))
+                            temporal.WriteLine(cadena);
+                    }
+                    else
+                    {
+                        temporal.WriteLine(cadena);
+                    }
+                    cadena = Lectura.ReadLine();
+                }
+                if (encontrado == false)
+                    Lectura.Close();
+                temporal.Close();
+                File.Delete("Ramo.txt");
+                File.Move("temp.txt", "Ramo.txt");
+                Lectura.Close();
+                temporal.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e.Message);
+            }
+        }
+
     }
 }
