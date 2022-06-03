@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\GestionTareas",
+    "\\GestionTareasController",
+    "\\GestionTareasController\\Models",
+    "\\GestionTareasController\\Properties",
+    "\\GestionTareasData",
+    "\\GestionTareasDataAccess",
+    "\\GestionTareasData\\obj",
+    "\\GestionTareasData\\obj\\Debug",
+    "\\GestionTareasData\\obj\\Release"
+  ],
+  "SelectedNode": "\\GestionTareasController\\Models\\ContactModel.cs",
+  "PreviewInSolutionExplorer": false
+}

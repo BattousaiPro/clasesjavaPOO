@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_CONTACT_LISTModelStoreContainer" CdmEntityContainer="DB_CONTACT_LISTEntities">
+    <EntitySetMapping Name="TBL_CONTACT">
+      <EntityTypeMapping TypeName="DB_CONTACT_LISTModel.TBL_CONTACT">
+        <MappingFragment StoreEntitySet="TBL_CONTACT">
+          <ScalarProperty Name="idContactList" ColumnName="idContactList" />
+          <ScalarProperty Name="NameContact" ColumnName="NameContact" />
+          <ScalarProperty Name="PhoneContact" ColumnName="PhoneContact" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

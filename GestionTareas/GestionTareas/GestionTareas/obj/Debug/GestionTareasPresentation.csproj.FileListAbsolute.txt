@@ -1,0 +1,11 @@
+C:\Users\Patoo\Downloads\Universidad\Programacion .net\GestionTareas\GestionTareas\bin\Debug\GestionTareas.exe.config
+C:\Users\Patoo\Downloads\Universidad\Programacion .net\GestionTareas\GestionTareas\bin\Debug\GestionTareas.exe
+C:\Users\Patoo\Downloads\Universidad\Programacion .net\GestionTareas\GestionTareas\bin\Debug\GestionTareas.pdb
+C:\Users\Patoo\Downloads\Universidad\Programacion .net\GestionTareas\GestionTareas\obj\Debug\GestionTareasPresentation.csproj.AssemblyReference.cache
+C:\Users\Patoo\Downloads\Universidad\Programacion .net\GestionTareas\GestionTareas\obj\Debug\GestionTareasPresentation.csproj.SuggestedBindingRedirects.cache
+C:\Users\Patoo\Downloads\Universidad\Programacion .net\GestionTareas\GestionTareas\obj\Debug\GestionTareas.Form1.resources
+C:\Users\Patoo\Downloads\Universidad\Programacion .net\GestionTareas\GestionTareas\obj\Debug\GestionTareas.Properties.Resources.resources
+C:\Users\Patoo\Downloads\Universidad\Programacion .net\GestionTareas\GestionTareas\obj\Debug\GestionTareasPresentation.csproj.GenerateResource.cache
+C:\Users\Patoo\Downloads\Universidad\Programacion .net\GestionTareas\GestionTareas\obj\Debug\GestionTareasPresentation.csproj.CoreCompileInputs.cache
+C:\Users\Patoo\Downloads\Universidad\Programacion .net\GestionTareas\GestionTareas\obj\Debug\GestionTareas.exe
+C:\Users\Patoo\Downloads\Universidad\Programacion .net\GestionTareas\GestionTareas\obj\Debug\GestionTareas.pdb
