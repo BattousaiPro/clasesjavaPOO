@@ -56,6 +56,7 @@ namespace GestionTareas
         }
         private void dgvContacts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            string msg = "Contacto agregado con exito a la BBDD";
             try
             {
                 DataGridViewRow row = dgvContacts.Rows[e.RowIndex];
@@ -67,7 +68,8 @@ namespace GestionTareas
             }
             catch
             {
-                
+                msg = "Contacto No agregado con exito a la BBDD";
+                MessageBox.Show(msg);
             }
         }
     }
