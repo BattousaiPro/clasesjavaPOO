@@ -11,6 +11,6 @@
     "\\GestionTareasData\\obj\\Debug",
     "\\GestionTareasData\\obj\\Release"
   ],
-  "SelectedNode": "\\GestionTareasController\\Models\\ContactModel.cs",
+  "SelectedNode": "\\GestionTareasDataAccess\\TBL_CONTACT.cs",
   "PreviewInSolutionExplorer": false
 }

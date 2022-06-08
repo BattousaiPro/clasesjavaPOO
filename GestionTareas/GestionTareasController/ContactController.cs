@@ -1,6 +1,5 @@
 ﻿using GestionTareasController.Models;
 using GestionTareasDataAccess;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,7 +36,9 @@ namespace GestionTareasController
             TBL_CONTACT dataSave = new TBL_CONTACT()
             {
                 NameContact = contact.Name,
-                PhoneContact = contact.Phone
+                PhoneContact = contact.Phone,
+                AddressContact = contact.Address,
+                EmailContact = contact.Email,
             };
             string request = contacDA.CreateContact(dataSave);
             if(request != string.Empty)
@@ -46,6 +47,21 @@ namespace GestionTareasController
             }
 
             return response;
+       }
+        public List<ContactModel> GetContactList()
+        {
+          List<ContactModel> response = new List<ContactModel>();
+          var contacDA = new ContactDataAccess();
+          List<TBL_CONTACT> contacData = contacDA.GetContactList();
+          foreach(TBL_CONTACT contact in contacData)
+          {
+                ContactModel itemContact = new ContactModel( contact.NameContact, contact.AddressContact, contact.PhoneContact, contact.EmailContact);
+                response.Add(itemContact);
+          }
+            return response;
+
+
         }
+
     }
 }

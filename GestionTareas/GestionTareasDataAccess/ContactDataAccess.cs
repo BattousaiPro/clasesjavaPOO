@@ -49,6 +49,8 @@ namespace GestionTareasDataAccess
 
             dataChange.NameContact = contact.NameContact;
             dataChange.PhoneContact = contact.PhoneContact;
+            dataChange.EmailContact = contact.EmailContact;
+            dataChange.AddressContact = contact.AddressContact;
             ctx.SaveChanges();
         }
 

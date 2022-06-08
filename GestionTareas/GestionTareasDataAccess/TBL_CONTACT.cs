@@ -17,5 +17,7 @@ namespace GestionTareasDataAccess
         public int idContactList { get; set; }
         public string NameContact { get; set; }
         public string PhoneContact { get; set; }
+        public string EmailContact { get; set; }
+        public string AddressContact { get; set; }
     }
 }

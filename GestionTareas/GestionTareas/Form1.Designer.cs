@@ -41,99 +41,96 @@
             this.btnModify = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContacts)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
             // tbxName
             // 
-            this.tbxName.Location = new System.Drawing.Point(17, 37);
-            this.tbxName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxName.Location = new System.Drawing.Point(13, 30);
             this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(308, 22);
+            this.tbxName.Size = new System.Drawing.Size(232, 20);
             this.tbxName.TabIndex = 1;
             // 
             // tbxAdddress
             // 
-            this.tbxAdddress.Location = new System.Drawing.Point(368, 37);
-            this.tbxAdddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxAdddress.Location = new System.Drawing.Point(276, 30);
             this.tbxAdddress.Name = "tbxAdddress";
-            this.tbxAdddress.Size = new System.Drawing.Size(308, 22);
+            this.tbxAdddress.Size = new System.Drawing.Size(232, 20);
             this.tbxAdddress.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(368, 16);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(276, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 16);
+            this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Direccion";
             // 
             // tbxPhone
             // 
-            this.tbxPhone.Location = new System.Drawing.Point(17, 116);
-            this.tbxPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxPhone.Location = new System.Drawing.Point(13, 94);
             this.tbxPhone.Name = "tbxPhone";
-            this.tbxPhone.Size = new System.Drawing.Size(308, 22);
+            this.tbxPhone.Size = new System.Drawing.Size(232, 20);
             this.tbxPhone.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 95);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(13, 77);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 16);
+            this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Telefono";
             // 
             // tbxMail
             // 
-            this.tbxMail.Location = new System.Drawing.Point(368, 116);
-            this.tbxMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxMail.Location = new System.Drawing.Point(276, 94);
             this.tbxMail.Name = "tbxMail";
-            this.tbxMail.Size = new System.Drawing.Size(308, 22);
+            this.tbxMail.Size = new System.Drawing.Size(232, 20);
             this.tbxMail.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(368, 95);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(276, 77);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 16);
+            this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "E-mail";
             // 
             // dgvContacts
             // 
             this.dgvContacts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvContacts.Location = new System.Drawing.Point(16, 254);
-            this.dgvContacts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvContacts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.Telefono,
+            this.Mail,
+            this.Direccion});
+            this.dgvContacts.Location = new System.Drawing.Point(12, 206);
             this.dgvContacts.Name = "dgvContacts";
-            this.dgvContacts.RowHeadersWidth = 51;
-            this.dgvContacts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvContacts.Size = new System.Drawing.Size(660, 351);
+            this.dgvContacts.Size = new System.Drawing.Size(495, 285);
             this.dgvContacts.TabIndex = 8;
-            this.dgvContacts.DoubleClick += new System.EventHandler(this.dgvContacts_DoubleClick);
+            this.dgvContacts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContacts_CellContentClick);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(729, 37);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Location = new System.Drawing.Point(547, 30);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(100, 28);
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Agregar";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -141,40 +138,56 @@
             // 
             // btnModify
             // 
-            this.btnModify.Location = new System.Drawing.Point(729, 73);
-            this.btnModify.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModify.Location = new System.Drawing.Point(547, 59);
             this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(100, 28);
+            this.btnModify.Size = new System.Drawing.Size(75, 23);
             this.btnModify.TabIndex = 10;
             this.btnModify.Text = "Modificar";
             this.btnModify.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(729, 108);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Location = new System.Drawing.Point(547, 88);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 28);
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 218);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(13, 177);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 16);
+            this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 12;
             this.label5.Text = "Contactos";
             // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Telefono
+            // 
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            // 
+            // Mail
+            // 
+            this.Mail.HeaderText = "Mail";
+            this.Mail.Name = "Mail";
+            // 
+            // Direccion
+            // 
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(909, 649);
+            this.ClientSize = new System.Drawing.Size(682, 527);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnModify);
@@ -188,10 +201,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbxName);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContacts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -213,6 +224,10 @@
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
     }
 }
 

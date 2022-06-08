@@ -10,15 +10,15 @@ C:\Users\micha\source\repos\GestionTareas\GestionTareasDataAccess\bin\Debug\Enti
 C:\Users\micha\source\repos\GestionTareas\GestionTareasDataAccess\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\micha\source\repos\GestionTareas\GestionTareasDataAccess\obj\Debug\GestionTareasDataAccess.csproj.AssemblyReference.cache
 C:\Users\micha\source\repos\GestionTareas\GestionTareasDataAccess\obj\Debug\GestionTareasDataAccess.csproj.CopyComplete
-C:\Users\Batto\source\repos\GestionTareas\GestionTareasDataAccess\bin\Debug\GestionTareasDataAccess.dll.config
-C:\Users\Batto\source\repos\GestionTareas\GestionTareasDataAccess\bin\Debug\GestionTareasDataAccess.dll
-C:\Users\Batto\source\repos\GestionTareas\GestionTareasDataAccess\bin\Debug\GestionTareasDataAccess.pdb
-C:\Users\Batto\source\repos\GestionTareas\GestionTareasDataAccess\bin\Debug\EntityFramework.dll
-C:\Users\Batto\source\repos\GestionTareas\GestionTareasDataAccess\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Batto\source\repos\GestionTareas\GestionTareasDataAccess\bin\Debug\EntityFramework.xml
-C:\Users\Batto\source\repos\GestionTareas\GestionTareasDataAccess\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Batto\source\repos\GestionTareas\GestionTareasDataAccess\obj\Debug\GestionTareasDataAccess.csproj.AssemblyReference.cache
-C:\Users\Batto\source\repos\GestionTareas\GestionTareasDataAccess\obj\Debug\GestionTareasDataAccess.csproj.CoreCompileInputs.cache
-C:\Users\Batto\source\repos\GestionTareas\GestionTareasDataAccess\obj\Debug\GestionTareasDataAccess.csproj.CopyComplete
-C:\Users\Batto\source\repos\GestionTareas\GestionTareasDataAccess\obj\Debug\GestionTareasDataAccess.dll
-C:\Users\Batto\source\repos\GestionTareas\GestionTareasDataAccess\obj\Debug\GestionTareasDataAccess.pdb
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareasDataAccess\bin\Debug\GestionTareasDataAccess.dll.config
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareasDataAccess\bin\Debug\GestionTareasDataAccess.dll
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareasDataAccess\bin\Debug\GestionTareasDataAccess.pdb
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareasDataAccess\bin\Debug\EntityFramework.dll
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareasDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareasDataAccess\bin\Debug\EntityFramework.xml
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareasDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareasDataAccess\obj\Debug\GestionTareasDataAccess.csproj.AssemblyReference.cache
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareasDataAccess\obj\Debug\GestionTareasDataAccess.csproj.CoreCompileInputs.cache
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareasDataAccess\obj\Debug\GestionTareasDataAccess.csproj.CopyComplete
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareasDataAccess\obj\Debug\GestionTareasDataAccess.dll
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareasDataAccess\obj\Debug\GestionTareasDataAccess.pdb

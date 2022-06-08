@@ -28,6 +28,8 @@
           <Property Name="idContactList" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NameContact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PhoneContact" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EmailContact" Type="String" Nullable="false" />
+          <Property Name="AddressContact" Type="String" Nullable="false" />
         </EntityType>
         <EntityContainer Name="DB_CONTACT_LISTEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TBL_CONTACT" EntityType="Self.TBL_CONTACT" />

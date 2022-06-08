@@ -19,3 +19,24 @@ C:\Users\micha\source\repos\GestionTareas\GestionTareas\bin\Debug\GestionTareasD
 C:\Users\micha\source\repos\GestionTareas\GestionTareas\bin\Debug\EntityFramework.xml
 C:\Users\micha\source\repos\GestionTareas\GestionTareas\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\micha\source\repos\GestionTareas\GestionTareas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\bin\Debug\GestionTareas.exe.config
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\bin\Debug\GestionTareas.exe
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\bin\Debug\GestionTareas.pdb
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\bin\Debug\EntityFramework.dll
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\bin\Debug\GestionTareasController.dll
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\bin\Debug\GestionTareasDataAccess.dll
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\bin\Debug\GestionTareasController.pdb
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\bin\Debug\EntityFramework.xml
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\bin\Debug\GestionTareasDataAccess.pdb
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\bin\Debug\GestionTareasDataAccess.dll.config
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\obj\Debug\GestionTareasPresentation.csproj.AssemblyReference.cache
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\obj\Debug\GestionTareasPresentation.csproj.SuggestedBindingRedirects.cache
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\obj\Debug\GestionTareas.Form1.resources
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\obj\Debug\GestionTareas.Properties.Resources.resources
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\obj\Debug\GestionTareasPresentation.csproj.GenerateResource.cache
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\obj\Debug\GestionTareasPresentation.csproj.CoreCompileInputs.cache
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\obj\Debug\GestionTareasPresentation.csproj.CopyComplete
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\obj\Debug\GestionTareas.exe
+C:\Users\dvarg\OneDrive\Escritorio\Nueva carpeta (3)\GestionTareas\GestionTareas\obj\Debug\GestionTareas.pdb
