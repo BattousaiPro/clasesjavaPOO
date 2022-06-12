@@ -35,12 +35,13 @@ namespace GestionTareasController
             var contacDA = new ContactDataAccess();
             TBL_CONTACT dataSave = new TBL_CONTACT()
             {
-                NameContact = contact.Name,
-                PhoneContact = contact.Phone,
-                AddressContact = contact.Address,
-                EmailContact = contact.Email,
+                NAME_CONTACT = contact.Name,
+                PHONE_CONTACT = contact.Phone,
+                ADDRESS_CONTACT = contact.Address,
+                MAIL_CONTACT = contact.Email,
             };
             string request = contacDA.CreateContact(dataSave);
+
             if(request != string.Empty)
             {
                 response = request;
@@ -51,11 +52,13 @@ namespace GestionTareasController
         public List<ContactModel> GetContactList()
         {
           List<ContactModel> response = new List<ContactModel>();
+
           var contacDA = new ContactDataAccess();
+
           List<TBL_CONTACT> contacData = contacDA.GetContactList();
           foreach(TBL_CONTACT contact in contacData)
           {
-                ContactModel itemContact = new ContactModel( contact.NameContact, contact.AddressContact, contact.PhoneContact, contact.EmailContact);
+                ContactModel itemContact = new ContactModel( contact.NAME_CONTACT, contact.ADDRESS_CONTACT, contact.PHONE_CONTACT, contact.MAIL_CONTACT);
                 response.Add(itemContact);
           }
             return response;

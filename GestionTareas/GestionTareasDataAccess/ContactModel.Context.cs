@@ -7,24 +7,3 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GestionTareasDataAccess
-{
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Infrastructure;
-    
-    public partial class DB_CONTACT_LISTEntities : DbContext
-    {
-        public DB_CONTACT_LISTEntities()
-            : base("name=DB_CONTACT_LISTEntities")
-        {
-        }
-    
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            throw new UnintentionalCodeFirstException();
-        }
-    
-        public virtual DbSet<TBL_CONTACT> TBL_CONTACT { get; set; }
-    }
-}

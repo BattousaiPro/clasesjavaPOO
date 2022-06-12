@@ -8,7 +8,7 @@ namespace GestionTareasDataAccess
 {
     public class ContactDataAccess
     {
-        DB_CONTACT_LISTEntities ctx = new DB_CONTACT_LISTEntities();
+        BD_CONTACT_LISTEntities ctx = new BD_CONTACT_LISTEntities();
 
         public List<TBL_CONTACT> GetContactList()
         {
@@ -17,9 +17,7 @@ namespace GestionTareasDataAccess
 
         public TBL_CONTACT getContactById(int idContact)
         {
-            return ctx.TBL_CONTACT
-                .Where(x => x.idContactList.Equals(idContact))
-                .FirstOrDefault();
+            return ctx.TBL_CONTACT.Where(x => x.ID_CONTACT.Equals(idContact)).Where(x => x.ID_CONTACT.Equals(idContact)).FirstOrDefault();
         }
 
         public string CreateContact(TBL_CONTACT contact)
@@ -43,22 +41,18 @@ namespace GestionTareasDataAccess
 
         public void EditContact(TBL_CONTACT contact)
         {
-            TBL_CONTACT dataChange = ctx.TBL_CONTACT.
-                 Where(x => x.idContactList.Equals(contact.idContactList))
-                 .FirstOrDefault();
+            TBL_CONTACT dataChange = ctx.TBL_CONTACT.Where(x => x.ID_CONTACT.Equals(contact.ID_CONTACT)).FirstOrDefault();
 
-            dataChange.NameContact = contact.NameContact;
-            dataChange.PhoneContact = contact.PhoneContact;
-            dataChange.EmailContact = contact.EmailContact;
-            dataChange.AddressContact = contact.AddressContact;
+            dataChange.NAME_CONTACT = contact.NAME_CONTACT;
+            dataChange.PHONE_CONTACT = contact.PHONE_CONTACT;
+            dataChange.MAIL_CONTACT = contact.MAIL_CONTACT;
+            dataChange.ADDRESS_CONTACT = contact.ADDRESS_CONTACT;
             ctx.SaveChanges();
         }
 
         public void DeleteContact(TBL_CONTACT contact)
         {
-            TBL_CONTACT dataRemove = ctx.TBL_CONTACT.
-                 Where(x => x.idContactList.Equals(contact.idContactList))
-                 .FirstOrDefault();
+            TBL_CONTACT dataRemove = ctx.TBL_CONTACT.Where(x => x.ID_CONTACT.Equals(contact.ID_CONTACT)).FirstOrDefault();
             ctx.TBL_CONTACT.Remove(dataRemove);
             ctx.SaveChanges();
         }

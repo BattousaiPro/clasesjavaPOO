@@ -72,32 +72,30 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="ContactModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ContactModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="ContactModel.edmx.diagram">
       <DependentUpon>ContactModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="ContactModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ContactModel.Context.cs</LastGenOutput>
       <DependentUpon>ContactModel.edmx</DependentUpon>
+      <LastGenOutput>ContactModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="ContactModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ContactModel.edmx</DependentUpon>
       <LastGenOutput>ContactModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

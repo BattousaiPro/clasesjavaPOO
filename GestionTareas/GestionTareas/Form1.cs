@@ -28,26 +28,27 @@ namespace GestionTareas
                 msg = isValid;
             }
             MessageBox.Show(msg);
-            Actualizar_tabla();
-            
+            Update_table();
         }
-        public void Actualizar_tabla()
+
+        public void Update_table()
         {
            ContactController contactController = new ContactController();
             dgvContacts.DataSource = contactController.GetContactList();
         }
+
         public void Form1_load(object sender, EventArgs e)
         {
             ContactController contactController = new ContactController();
             dgvContacts.DataSource = contactController.GetContactList();
         }
-        public void btmDelete_Click(object sender, EventArgs e)
+        public void btnDelete_Click(object sender, EventArgs e)
         {
            if (dgvContacts.SelectedRows.Count > 0)
            {
                 tbxName.Text = dgvContacts.CurrentRow.Cells["Name"].Value.ToString();
                 MessageBox.Show("Se a Eliminado El Contacto");
-                Actualizar_tabla();
+                Update_table();
            }
            else
            {

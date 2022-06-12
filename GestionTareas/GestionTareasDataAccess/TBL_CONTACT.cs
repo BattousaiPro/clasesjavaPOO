@@ -14,10 +14,10 @@ namespace GestionTareasDataAccess
     
     public partial class TBL_CONTACT
     {
-        public int idContactList { get; set; }
-        public string NameContact { get; set; }
-        public string PhoneContact { get; set; }
-        public string EmailContact { get; set; }
-        public string AddressContact { get; set; }
+        public int ID_CONTACT { get; set; }
+        public string NAME_CONTACT { get; set; }
+        public string ADDRESS_CONTACT { get; set; }
+        public string PHONE_CONTACT { get; set; }
+        public string MAIL_CONTACT { get; set; }
     }
 }

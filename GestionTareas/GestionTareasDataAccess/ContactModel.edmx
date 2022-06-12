@@ -4,34 +4,36 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DB_CONTACT_LISTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="BD_CONTACT_LISTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="TBL_CONTACT">
           <Key>
-            <PropertyRef Name="idContactList" />
+            <PropertyRef Name="ID_CONTACT" />
           </Key>
-          <Property Name="idContactList" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="NameContact" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="PhoneContact" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="ID_CONTACT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME_CONTACT" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ADDRESS_CONTACT" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="PHONE_CONTACT" Type="varchar" MaxLength="19" Nullable="false" />
+          <Property Name="MAIL_CONTACT" Type="varchar" MaxLength="20" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="DB_CONTACT_LISTModelStoreContainer">
+        <EntityContainer Name="BD_CONTACT_LISTModelStoreContainer">
           <EntitySet Name="TBL_CONTACT" EntityType="Self.TBL_CONTACT" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DB_CONTACT_LISTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="BD_CONTACT_LISTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="TBL_CONTACT">
           <Key>
-            <PropertyRef Name="idContactList" />
+            <PropertyRef Name="ID_CONTACT" />
           </Key>
-          <Property Name="idContactList" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NameContact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="PhoneContact" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="EmailContact" Type="String" Nullable="false" />
-          <Property Name="AddressContact" Type="String" Nullable="false" />
+          <Property Name="ID_CONTACT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME_CONTACT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ADDRESS_CONTACT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PHONE_CONTACT" Type="String" MaxLength="19" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MAIL_CONTACT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="DB_CONTACT_LISTEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BD_CONTACT_LISTEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TBL_CONTACT" EntityType="Self.TBL_CONTACT" />
         </EntityContainer>
       </Schema>
@@ -39,13 +41,15 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DB_CONTACT_LISTModelStoreContainer" CdmEntityContainer="DB_CONTACT_LISTEntities">
+        <EntityContainerMapping StorageEntityContainer="BD_CONTACT_LISTModelStoreContainer" CdmEntityContainer="BD_CONTACT_LISTEntities">
           <EntitySetMapping Name="TBL_CONTACT">
-            <EntityTypeMapping TypeName="DB_CONTACT_LISTModel.TBL_CONTACT">
+            <EntityTypeMapping TypeName="BD_CONTACT_LISTModel.TBL_CONTACT">
               <MappingFragment StoreEntitySet="TBL_CONTACT">
-                <ScalarProperty Name="idContactList" ColumnName="idContactList" />
-                <ScalarProperty Name="NameContact" ColumnName="NameContact" />
-                <ScalarProperty Name="PhoneContact" ColumnName="PhoneContact" />
+                <ScalarProperty Name="ID_CONTACT" ColumnName="ID_CONTACT" />
+                <ScalarProperty Name="NAME_CONTACT" ColumnName="NAME_CONTACT" />
+                <ScalarProperty Name="ADDRESS_CONTACT" ColumnName="ADDRESS_CONTACT" />
+                <ScalarProperty Name="PHONE_CONTACT" ColumnName="PHONE_CONTACT" />
+                <ScalarProperty Name="MAIL_CONTACT" ColumnName="MAIL_CONTACT" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
