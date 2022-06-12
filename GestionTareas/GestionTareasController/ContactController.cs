@@ -65,6 +65,28 @@ namespace GestionTareasController
             return response;
         }
 
+        public string EditContact(ContactModel contact)
+        {
+            string response = string.Empty;
+            var contacDA = new ContactDataAccess();
+            TBL_CONTACT dataSave = new TBL_CONTACT()
+            {
+                ID_CONTACT = contact.Id,
+                NAME_CONTACT = contact.Name,
+                PHONE_CONTACT = contact.Phone,
+                ADDRESS_CONTACT = contact.Address,
+                MAIL_CONTACT = contact.Email,
+            };
+            //string request = 
+                contacDA.EditContact(dataSave);
+
+            /*if (request != string.Empty)
+            {
+                response = request;
+            }*/
+            return response;
+        }
+
         public List<ContactModel> GetContactList()
         {
             List<ContactModel> response = new List<ContactModel>();

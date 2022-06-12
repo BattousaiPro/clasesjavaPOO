@@ -52,10 +52,10 @@ namespace GestionTareas
             {
                 DataGridViewRow row = dgvContacts.Rows[e.RowIndex];
 
-                tbxName.Text = row.Cells[0].Value.ToString();
-                tbxAdddress.Text = row.Cells[1].Value.ToString();
-                tbxPhone.Text = row.Cells[2].Value.ToString();
-                tbxMail.Text = row.Cells[3].Value.ToString();
+                tbxName.Text = row.Cells[1].Value.ToString();
+                tbxAdddress.Text = row.Cells[2].Value.ToString();
+                tbxPhone.Text = row.Cells[3].Value.ToString();
+                tbxMail.Text = row.Cells[4].Value.ToString();
             }
             catch
             {
@@ -66,7 +66,21 @@ namespace GestionTareas
 
         private void btnModify_Click(object sender, EventArgs e)
         {
-            // pendiente.
+            // datos de la tabla.
+            int id = int.Parse(dgvContacts.CurrentRow.Cells["Id"].Value.ToString());
+
+            // Datos del formulario.
+            DataGridViewRow row = dgvContacts.Rows[0];
+            tbxName.Text = row.Cells[1].Value.ToString();
+            tbxAdddress.Text = row.Cells[2].Value.ToString();
+            tbxPhone.Text = row.Cells[3].Value.ToString();
+            tbxMail.Text = row.Cells[4].Value.ToString();
+
+            ContactModel contact = new ContactModel(id, tbxName.Text, tbxAdddress.Text, tbxPhone.Text, tbxMail.Text);
+            ContactController contactController = new ContactController();
+            string isValid = contactController.EditContact(contact);
+            MessageBox.Show("Se a Actualizado El Contacto");
+            Update_table_Front();
         }
 
         private void btnDelete_Click_1(object sender, EventArgs e)
@@ -81,8 +95,6 @@ namespace GestionTareas
                 ContactModel contact = new ContactModel(id, name, address, phone, email);
                 ContactController contactController = new ContactController();
                 string isValid = contactController.DeleteContat(contact);
-
-
                 MessageBox.Show("Se a Eliminado El Contacto");
                 Update_table_Front();
             }
