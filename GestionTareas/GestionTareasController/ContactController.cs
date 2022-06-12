@@ -53,10 +53,7 @@ namespace GestionTareasController
             var contacDA = new ContactDataAccess();
             TBL_CONTACT dataSave = new TBL_CONTACT()
             {
-                NAME_CONTACT = contact.Name,
-                PHONE_CONTACT = contact.Phone,
-                ADDRESS_CONTACT = contact.Address,
-                MAIL_CONTACT = contact.Email,
+                ID_CONTACT = contact.Id
             };
             //string request = 
                 contacDA.DeleteContact(dataSave);
@@ -75,7 +72,7 @@ namespace GestionTareasController
             List<TBL_CONTACT> contacData = contacDA.GetContactList();
             foreach(TBL_CONTACT contact in contacData)
             {
-                ContactModel itemContact = new ContactModel( contact.NAME_CONTACT, contact.ADDRESS_CONTACT, contact.PHONE_CONTACT, contact.MAIL_CONTACT);
+                ContactModel itemContact = new ContactModel(contact.ID_CONTACT, contact.NAME_CONTACT, contact.ADDRESS_CONTACT, contact.PHONE_CONTACT, contact.MAIL_CONTACT);
                 response.Add(itemContact);
             }
             return response;

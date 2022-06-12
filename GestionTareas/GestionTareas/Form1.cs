@@ -16,11 +16,12 @@ namespace GestionTareas
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            int id = 0;
             string name = tbxName.Text;
             string address = tbxAdddress.Text;
             string phone = tbxPhone.Text;
             string email = tbxMail.Text;
-            ContactModel contact = new ContactModel(name, address, phone, email);
+            ContactModel contact = new ContactModel(id, name, address, phone, email);
             ContactController contactController = new ContactController();
             string isValid = contactController.DataValidate(contact);
             string msg = "Contacto agregado con exito";
@@ -72,13 +73,12 @@ namespace GestionTareas
         {
             if (dgvContacts.SelectedRows.Count > 0)
             {
-                tbxName.Text = dgvContacts.CurrentRow.Cells["Name"].Value.ToString();
-
+                int id = int.Parse(dgvContacts.CurrentRow.Cells["Id"].Value.ToString());
                 string name = dgvContacts.CurrentRow.Cells["Name"].Value.ToString();
                 string address = dgvContacts.CurrentRow.Cells["Address"].Value.ToString();
                 string phone = dgvContacts.CurrentRow.Cells["Phone"].Value.ToString();
                 string email = dgvContacts.CurrentRow.Cells["Email"].Value.ToString();
-                ContactModel contact = new ContactModel(name, address, phone, email);
+                ContactModel contact = new ContactModel(id, name, address, phone, email);
                 ContactController contactController = new ContactController();
                 string isValid = contactController.DeleteContat(contact);
 

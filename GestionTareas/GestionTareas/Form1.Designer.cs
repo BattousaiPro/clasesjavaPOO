@@ -123,7 +123,7 @@
             this.dgvContacts.Margin = new System.Windows.Forms.Padding(4);
             this.dgvContacts.Name = "dgvContacts";
             this.dgvContacts.RowHeadersWidth = 51;
-            this.dgvContacts.Size = new System.Drawing.Size(660, 351);
+            this.dgvContacts.Size = new System.Drawing.Size(768, 351);
             this.dgvContacts.TabIndex = 8;
             this.dgvContacts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContacts_CellContentClick);
             // 
