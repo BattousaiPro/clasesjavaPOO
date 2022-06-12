@@ -17,7 +17,9 @@ namespace GestionTareasDataAccess
 
         public TBL_CONTACT getContactById(int idContact)
         {
-            return ctx.TBL_CONTACT.Where(x => x.ID_CONTACT.Equals(idContact)).Where(x => x.ID_CONTACT.Equals(idContact)).FirstOrDefault();
+            return ctx.TBL_CONTACT
+                .Where(x => x.ID_CONTACT.Equals(idContact))
+                .FirstOrDefault();
         }
 
         public string CreateContact(TBL_CONTACT contact)
