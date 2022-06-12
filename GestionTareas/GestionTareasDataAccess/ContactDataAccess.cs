@@ -54,7 +54,9 @@ namespace GestionTareasDataAccess
 
         public void DeleteContact(TBL_CONTACT contact)
         {
-            TBL_CONTACT dataRemove = ctx.TBL_CONTACT.Where(x => x.ID_CONTACT.Equals(contact.ID_CONTACT)).FirstOrDefault();
+            TBL_CONTACT dataRemove = ctx.TBL_CONTACT
+                .Where(x => x.ID_CONTACT.Equals(contact.ID_CONTACT))
+                .FirstOrDefault();
             ctx.TBL_CONTACT.Remove(dataRemove);
             ctx.SaveChanges();
         }

@@ -57,7 +57,7 @@
             // tbxName
             // 
             this.tbxName.Location = new System.Drawing.Point(17, 37);
-            this.tbxName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxName.Margin = new System.Windows.Forms.Padding(4);
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(308, 22);
             this.tbxName.TabIndex = 1;
@@ -65,7 +65,7 @@
             // tbxAdddress
             // 
             this.tbxAdddress.Location = new System.Drawing.Point(368, 37);
-            this.tbxAdddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxAdddress.Margin = new System.Windows.Forms.Padding(4);
             this.tbxAdddress.Name = "tbxAdddress";
             this.tbxAdddress.Size = new System.Drawing.Size(308, 22);
             this.tbxAdddress.TabIndex = 3;
@@ -83,7 +83,7 @@
             // tbxPhone
             // 
             this.tbxPhone.Location = new System.Drawing.Point(17, 116);
-            this.tbxPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxPhone.Margin = new System.Windows.Forms.Padding(4);
             this.tbxPhone.Name = "tbxPhone";
             this.tbxPhone.Size = new System.Drawing.Size(308, 22);
             this.tbxPhone.TabIndex = 5;
@@ -101,7 +101,7 @@
             // tbxMail
             // 
             this.tbxMail.Location = new System.Drawing.Point(368, 116);
-            this.tbxMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxMail.Margin = new System.Windows.Forms.Padding(4);
             this.tbxMail.Name = "tbxMail";
             this.tbxMail.Size = new System.Drawing.Size(308, 22);
             this.tbxMail.TabIndex = 7;
@@ -120,7 +120,7 @@
             // 
             this.dgvContacts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvContacts.Location = new System.Drawing.Point(16, 254);
-            this.dgvContacts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvContacts.Margin = new System.Windows.Forms.Padding(4);
             this.dgvContacts.Name = "dgvContacts";
             this.dgvContacts.RowHeadersWidth = 51;
             this.dgvContacts.Size = new System.Drawing.Size(660, 351);
@@ -130,7 +130,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(729, 37);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 28);
             this.btnAdd.TabIndex = 9;
@@ -141,22 +141,24 @@
             // btnModify
             // 
             this.btnModify.Location = new System.Drawing.Point(729, 73);
-            this.btnModify.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModify.Margin = new System.Windows.Forms.Padding(4);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(100, 28);
             this.btnModify.TabIndex = 10;
             this.btnModify.Text = "Modificar";
             this.btnModify.UseVisualStyleBackColor = true;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(729, 108);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 28);
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
             // label5
             // 
@@ -186,7 +188,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbxName);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgvContacts)).EndInit();

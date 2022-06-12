@@ -11,6 +11,7 @@ namespace GestionTareas
         public Form1()
         {
             InitializeComponent();
+            Update_table_Front();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -28,10 +29,10 @@ namespace GestionTareas
                 msg = isValid;
             }
             MessageBox.Show(msg);
-            Update_table();
+            Update_table_Front();
         }
 
-        public void Update_table()
+        public void Update_table_Front()
         {
            ContactController contactController = new ContactController();
             dgvContacts.DataSource = contactController.GetContactList();
@@ -42,19 +43,7 @@ namespace GestionTareas
             ContactController contactController = new ContactController();
             dgvContacts.DataSource = contactController.GetContactList();
         }
-        public void btnDelete_Click(object sender, EventArgs e)
-        {
-           if (dgvContacts.SelectedRows.Count > 0)
-           {
-                tbxName.Text = dgvContacts.CurrentRow.Cells["Name"].Value.ToString();
-                MessageBox.Show("Se a Eliminado El Contacto");
-                Update_table();
-           }
-           else
-           {
-                MessageBox.Show("Escoger Fila a Eliminar");
-           }
-        }
+
         private void dgvContacts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string msg = "Contacto agregado con exito a la BBDD";
@@ -71,6 +60,35 @@ namespace GestionTareas
             {
                 msg = "Contacto No agregado con exito a la BBDD";
                 MessageBox.Show(msg);
+            }
+        }
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            // pendiente.
+        }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            if (dgvContacts.SelectedRows.Count > 0)
+            {
+                tbxName.Text = dgvContacts.CurrentRow.Cells["Name"].Value.ToString();
+
+                string name = dgvContacts.CurrentRow.Cells["Name"].Value.ToString();
+                string address = dgvContacts.CurrentRow.Cells["Address"].Value.ToString();
+                string phone = dgvContacts.CurrentRow.Cells["Phone"].Value.ToString();
+                string email = dgvContacts.CurrentRow.Cells["Email"].Value.ToString();
+                ContactModel contact = new ContactModel(name, address, phone, email);
+                ContactController contactController = new ContactController();
+                string isValid = contactController.DeleteContat(contact);
+
+
+                MessageBox.Show("Se a Eliminado El Contacto");
+                Update_table_Front();
+            }
+            else
+            {
+                MessageBox.Show("Escoger Fila a Eliminar");
             }
         }
     }
