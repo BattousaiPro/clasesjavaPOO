@@ -109,15 +109,12 @@ namespace GestionTareas
         {
             try
             {
-                
                 DataGridViewRow rows = dgvContacts.Rows[e.RowIndex];
 
-
-
-                name = Name;
-                Phone = Phone;
-                Address = Address;
-                Email = Email;
+                //name = Name;
+                //Phone = Phone;
+                //Address = Address;
+                //Email = Email;
 
                
                 tbxName.Text = rows.Cells[1].Value.ToString();
@@ -125,11 +122,11 @@ namespace GestionTareas
                 tbxPhone.Text = rows.Cells[3].Value.ToString();
                 tbxMail.Text = rows.Cells[4].Value.ToString();
 
-                ContactModel contact = new ContactModel(id,Name,Adddress,Phone,Mail);
-                ContactController contactController = new ContactController();
-                string isValid = contactController.EditContact(contact);
+                //ContactModel contact = new ContactModel(id,Name,Adddress,Phone,Mail);
+                //ContactController contactController = new ContactController();
+                //string isValid = contactController.EditContact(contact);
                 MessageBox.Show("Se a Actualizado El Contacto");
-                Update_table_Front();
+                //Update_table_Front();
             }
             catch
             {
