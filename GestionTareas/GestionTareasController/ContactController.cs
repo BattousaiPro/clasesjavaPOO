@@ -55,13 +55,13 @@ namespace GestionTareasController
             {
                 ID_CONTACT = contact.Id
             };
-            //string request = 
+            string request = 
                 contacDA.DeleteContact(dataSave);
 
-            /*if (request != string.Empty)
+            if (request != string.Empty)
             {
                 response = request;
-            }*/
+            }
             return response;
         }
 
@@ -77,13 +77,13 @@ namespace GestionTareasController
                 ADDRESS_CONTACT = contact.Address,
                 MAIL_CONTACT = contact.Email,
             };
-            //string request = 
+            string request = 
                 contacDA.EditContact(dataSave);
 
-            /*if (request != string.Empty)
+            if (request != string.Empty)
             {
                 response = request;
-            }*/
+            }
             return response;
         }
 

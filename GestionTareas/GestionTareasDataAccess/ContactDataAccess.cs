@@ -41,24 +41,50 @@ namespace GestionTareasDataAccess
            return response;
         }
 
-        public void EditContact(TBL_CONTACT contact)
+        public string EditContact(TBL_CONTACT contact)
         {
-            TBL_CONTACT dataChange = ctx.TBL_CONTACT.Where(x => x.ID_CONTACT.Equals(contact.ID_CONTACT)).FirstOrDefault();
+            string response = string.Empty;
+            try
+            {
+                TBL_CONTACT dataChange = ctx.TBL_CONTACT.Where(x => x.ID_CONTACT.Equals(contact.ID_CONTACT)).FirstOrDefault();
 
-            dataChange.NAME_CONTACT = contact.NAME_CONTACT;
-            dataChange.PHONE_CONTACT = contact.PHONE_CONTACT;
-            dataChange.MAIL_CONTACT = contact.MAIL_CONTACT;
-            dataChange.ADDRESS_CONTACT = contact.ADDRESS_CONTACT;
-            ctx.SaveChanges();
+                dataChange.NAME_CONTACT = contact.NAME_CONTACT;
+                dataChange.PHONE_CONTACT = contact.PHONE_CONTACT;
+                dataChange.MAIL_CONTACT = contact.MAIL_CONTACT;
+                dataChange.ADDRESS_CONTACT = contact.ADDRESS_CONTACT;
+                ctx.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                response = e.Message;
+            }
+            finally
+            {
+                ctx.Dispose();
+            }
+            return response;
         }
 
-        public void DeleteContact(TBL_CONTACT contact)
+        public string DeleteContact(TBL_CONTACT contact)
         {
-            TBL_CONTACT dataRemove = ctx.TBL_CONTACT
+            string response = string.Empty;
+            try
+            {
+                TBL_CONTACT dataRemove = ctx.TBL_CONTACT
                 .Where(x => x.ID_CONTACT.Equals(contact.ID_CONTACT))
                 .FirstOrDefault();
-            ctx.TBL_CONTACT.Remove(dataRemove);
-            ctx.SaveChanges();
+                ctx.TBL_CONTACT.Remove(dataRemove);
+                ctx.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                response = e.Message;
+            }
+            finally
+            {
+                ctx.Dispose();
+            }
+            return response;
         }
     }
 }

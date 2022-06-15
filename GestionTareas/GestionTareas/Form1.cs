@@ -72,16 +72,23 @@ namespace GestionTareas
             ContactModel contact = new ContactModel(id, tbxName.Text, tbxAdddress.Text, tbxPhone.Text, tbxMail.Text);
             ContactController contactController = new ContactController();
             string isValid = contactController.EditContact(contact);
+            string msg = "Se a Actualizado El Contacto";
+            if (isValid != string.Empty)
+            {
+                msg = isValid;
+            }
+            MessageBox.Show(msg);
             tbxName.Text = "";
             tbxAdddress.Text = "";
             tbxPhone.Text = "";
             tbxMail.Text = "";
-            MessageBox.Show("Se a Actualizado El Contacto");
             Update_table_Front();
+
         }
 
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
+            string msg = "";
             if (dgvContacts.SelectedRows.Count > 0)
             {
                 int id = int.Parse(dgvContacts.CurrentRow.Cells["Id"].Value.ToString());
@@ -92,13 +99,19 @@ namespace GestionTareas
                 ContactModel contact = new ContactModel(id, name, address, phone, email);
                 ContactController contactController = new ContactController();
                 string isValid = contactController.DeleteContat(contact);
-                MessageBox.Show("Se a Eliminado El Contacto");
-                Update_table_Front();
+                msg = "Contacto agregado con exito";
+                if (isValid != string.Empty)
+                {
+                    msg = isValid;
+                }
             }
             else
             {
-                MessageBox.Show("Escoger Fila a Eliminar");
+                msg = "Escoger Fila a Eliminar";
             }
+            MessageBox.Show(msg);
+            Update_table_Front();
+
         }
 
         public void dgvContacts_CellClick(object sender, DataGridViewCellEventArgs e)
