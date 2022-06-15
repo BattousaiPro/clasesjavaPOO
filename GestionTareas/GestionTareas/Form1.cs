@@ -67,16 +67,8 @@ namespace GestionTareas
 
         private void btnModify_Click(object sender, EventArgs e)
         {
-            // datos de la tabla. 
+            // datos de la tabla.
             int id = int.Parse(dgvContacts.CurrentRow.Cells["Id"].Value.ToString());
-
-            // Datos del formulario.
-            DataGridViewRow row = dgvContacts.Rows[0];
-            tbxName.Text = row.Cells[1].Value.ToString();
-            tbxAdddress.Text = row.Cells[2].Value.ToString();
-            tbxPhone.Text = row.Cells[3].Value.ToString();
-            tbxMail.Text = row.Cells[4].Value.ToString();
-
             ContactModel contact = new ContactModel(id, tbxName.Text, tbxAdddress.Text, tbxPhone.Text, tbxMail.Text);
             ContactController contactController = new ContactController();
             string isValid = contactController.EditContact(contact);
@@ -107,30 +99,24 @@ namespace GestionTareas
 
         public void dgvContacts_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            string msg = "";
             try
             {
                 DataGridViewRow rows = dgvContacts.Rows[e.RowIndex];
 
-                //name = Name;
-                //Phone = Phone;
-                //Address = Address;
-                //Email = Email;
-
-               
                 tbxName.Text = rows.Cells[1].Value.ToString();
                 tbxAdddress.Text = rows.Cells[2].Value.ToString();
                 tbxPhone.Text = rows.Cells[3].Value.ToString();
                 tbxMail.Text = rows.Cells[4].Value.ToString();
-
-                //ContactModel contact = new ContactModel(id,Name,Adddress,Phone,Mail);
-                //ContactController contactController = new ContactController();
-                //string isValid = contactController.EditContact(contact);
-                MessageBox.Show("Se a Actualizado El Contacto");
-                //Update_table_Front();
             }
             catch
             {
-                
+                tbxName.Text = "";
+                tbxAdddress.Text = "";
+                tbxPhone.Text = "";
+                tbxMail.Text = "";
+                msg = "Contacto no se pudo seleccionar.";
+                MessageBox.Show(msg);
             }
            
         }
