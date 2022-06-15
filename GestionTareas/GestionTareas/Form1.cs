@@ -72,6 +72,10 @@ namespace GestionTareas
             ContactModel contact = new ContactModel(id, tbxName.Text, tbxAdddress.Text, tbxPhone.Text, tbxMail.Text);
             ContactController contactController = new ContactController();
             string isValid = contactController.EditContact(contact);
+            tbxName.Text = "";
+            tbxAdddress.Text = "";
+            tbxPhone.Text = "";
+            tbxMail.Text = "";
             MessageBox.Show("Se a Actualizado El Contacto");
             Update_table_Front();
         }
