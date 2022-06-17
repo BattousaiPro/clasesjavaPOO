@@ -1,0 +1,1 @@
+create database BD_INVENTORY_LIST;
