@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BD_INVENTORY_LISTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBL_INVENTORY">
+          <Key>
+            <PropertyRef Name="ID_INVENTORY" />
+          </Key>
+          <Property Name="ID_INVENTORY" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ELECTRONICA_INVENTORY" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="MUEBLES_INVENTORY" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="LINEABLANCA__INVENTORY" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="BD_INVENTORY_LISTModelStoreContainer">
+          <EntitySet Name="TBL_INVENTORY" EntityType="Self.TBL_INVENTORY" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BD_INVENTORY_LISTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TBL_INVENTORY">
+          <Key>
+            <PropertyRef Name="ID_INVENTORY" />
+          </Key>
+          <Property Name="ID_INVENTORY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ELECTRONICA_INVENTORY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MUEBLES_INVENTORY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LINEABLANCA__INVENTORY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="BD_INVENTORY_LISTEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TBL_INVENTORY" EntityType="Self.TBL_INVENTORY" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BD_INVENTORY_LISTModelStoreContainer" CdmEntityContainer="BD_INVENTORY_LISTEntities">
+          <EntitySetMapping Name="TBL_INVENTORY">
+            <EntityTypeMapping TypeName="BD_INVENTORY_LISTModel.TBL_INVENTORY">
+              <MappingFragment StoreEntitySet="TBL_INVENTORY">
+                <ScalarProperty Name="ID_INVENTORY" ColumnName="ID_INVENTORY" />
+                <ScalarProperty Name="ELECTRONICA_INVENTORY" ColumnName="ELECTRONICA_INVENTORY" />
+                <ScalarProperty Name="MUEBLES_INVENTORY" ColumnName="MUEBLES_INVENTORY" />
+                <ScalarProperty Name="LINEABLANCA__INVENTORY" ColumnName="LINEABLANCA__INVENTORY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
