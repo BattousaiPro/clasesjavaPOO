@@ -16,7 +16,7 @@ namespace GestionTareas
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            int id = 0;
+            int id = 0; // datagriview se empieza con cero
             string name = tbxName.Text;
             string address = tbxAdddress.Text;
             string phone = tbxPhone.Text;
@@ -99,7 +99,7 @@ namespace GestionTareas
                 ContactModel contact = new ContactModel(id, name, address, phone, email);
                 ContactController contactController = new ContactController();
                 string isValid = contactController.DeleteContat(contact);
-                msg = "Contacto agregado con exito";
+                msg = "Contacto eliminado con exito :) ";
                 if (isValid != string.Empty)
                 {
                     msg = isValid;
