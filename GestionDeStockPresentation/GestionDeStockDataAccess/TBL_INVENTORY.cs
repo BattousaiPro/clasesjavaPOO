@@ -17,6 +17,6 @@ namespace GestionDeStockDataAccess
         public string ID_INVENTORY { get; set; }
         public string ELECTRONICA_INVENTORY { get; set; }
         public string MUEBLES_INVENTORY { get; set; }
-        public string LINEABLANCA__INVENTORY { get; set; }
+        public string LINEABLANCA_INVENTORY { get; set; }
     }
 }
