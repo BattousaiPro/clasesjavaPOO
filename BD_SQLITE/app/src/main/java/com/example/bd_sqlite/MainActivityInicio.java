@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class MainActivityInicio extends AppCompatActivity implements View.OnClickListener {
     Button btnEditar, getBtnEliminar, btnMostrar, btnSalir;
     TextView nombre;
-    int id=0;
+    int id = 0;
     Usuario u;
     BDUsuario bdUsuario;
 
@@ -33,15 +33,16 @@ public class MainActivityInicio extends AppCompatActivity implements View.OnClic
         btnSalir.setOnClickListener(this);
 
         bundel b = getIntent().getExtras();
-        id=b.getInt("ID");
+        id = b.getInt("ID");
         u = bdUsuario.getUsuarioID(id);
-        nombre.setText(u.getNombre()+ " " + u.getApellido());
+        nombre.setText(u.getNombre() + " " + u.getApellido());
     }
-    public void onClick(View v){
-        switch (v.getId()){
+
+    public void onClick(View v) {
+        switch (v.getId()) {
             case R.id.Editar:
-                Intet a = Integer (MainActivityInicio.this, MainActivityEditar.class);
-                a.putExtra("id",id);
+                Intet a = Integer(MainActivityInicio.this, MainActivityEditar.class);
+                a.putExtra("id", id);
                 startActivity(a);
                 break;
             case R.id.Eliminar:
@@ -51,12 +52,12 @@ public class MainActivityInicio extends AppCompatActivity implements View.OnClic
                 b.setPositiveButton("SI", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        if (bdUsuario.deleteUsuario(id)){
+                        if (bdUsuario.deleteUsuario(id)) {
                             Toast.makeText(MainActivityInicio.this, "Se Elimino Correcta Mente", Toast.LENGTH_LONG).show();
                             Intent b = new Intent(MainActivityInicio.this, MainActivity.class);
                             startActivity(b);
                             finish();
-                        }else {
+                        } else {
                             Toast.makeText(MainActivityInicio.this, "No Se Elimino La Cuenta", Toast.LENGTH_LONG).show();
                         }
                     }
@@ -68,7 +69,7 @@ public class MainActivityInicio extends AppCompatActivity implements View.OnClic
                     }
                 });
                 b.show();
-                 break;
+                break;
             case R.id.Mostrar:
                 Intent c = new Intent(MainActivityInicio.this, MainActivity.class);
                 startActivity(c);

@@ -1,6 +1,7 @@
 package com.example.bd_sqlite;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -22,8 +23,8 @@ public class MainActivityMostrar extends AppCompatActivity {
         ArrayList<Usuario> l = bdUsuario.selectUsiario();
 
         ArrayList<String> list = new ArrayList<>();
-        for (Usuario u : l){
-            list.add(u.getNombre()+ " " + u.getApellido());
+        for (Usuario u : l) {
+            list.add(u.getNombre() + " " + u.getApellido());
         }
 
         ArrayAdapter<String> a = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, lista);
