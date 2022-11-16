@@ -11,26 +11,15 @@ public class Usuario {
     }
 
     public boolean isNull() {
-        if (Nombre.equals("")
-                && Apellido.equals("")
-                && Usuario.equals("")
-                && Password.equals("")
+        if ("".equals(Nombre)
+                && "".equals(Apellido)
+                && "".equals(Usuario)
+                && "".equals(Password)
         ) {
             return false;
         } else {
             return true;
         }
-    }
-
-    @java.lang.Override
-    public java.lang.String toString() {
-        return "Usuario{" +
-                "id=" + id +
-                ", Nombre='" + Nombre + '\'' +
-                ", Apellido='" + Apellido + '\'' +
-                ", Usuario='" + Usuario + '\'' +
-                ", Password='" + Password + '\'' +
-                '}';
     }
 
     public Integer getId() {
@@ -73,6 +62,14 @@ public class Usuario {
         Password = password;
     }
 
-    Nombre = nombre;
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", Nombre='" + Nombre + '\'' +
+                ", Apellido='" + Apellido + '\'' +
+                ", Usuario='" + Usuario + '\'' +
+                ", Password='" + Password + '\'' +
+                '}';
     }
 }
