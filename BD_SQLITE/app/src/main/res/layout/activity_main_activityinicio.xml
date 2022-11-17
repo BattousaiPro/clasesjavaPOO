@@ -55,6 +55,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/nombreUsuario"
         android:layout_width="284dp"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
