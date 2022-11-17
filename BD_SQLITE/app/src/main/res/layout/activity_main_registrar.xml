@@ -36,7 +36,7 @@
         android:layout_width="154dp"
         android:layout_height="0dp"
         android:layout_marginEnd="14dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_Registrar"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Registrar_Img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/RegNombre"
         app:srcCompat="@drawable/hd_wallpaper_chibi_kenshin_anime_rurouni_kenshin_removebg_preview" />
@@ -109,7 +109,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     <Button
-        android:id="@+id/btn_Registrar"
+        android:id="@+id/btn_Cancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="77dp"
@@ -119,9 +119,9 @@
         android:textColorHint="#CD3232"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btn_Registrar"
-        app:layout_constraintStart_toStartOf="@+id/btn_Registrar"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Registrar" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_Cancelar"
+        app:layout_constraintStart_toStartOf="@+id/btn_Cancelar"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Cancelar" />
 
     <TextView
         android:id="@+id/textView"

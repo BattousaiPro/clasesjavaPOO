@@ -24,7 +24,7 @@ public class MainActivityRegistrar extends AppCompatActivity implements View.OnC
         nom = (EditText) findViewById(R.id.RegNombre);
         ap = (EditText) findViewById(R.id.RegApellido);
         reg = (Button) findViewById(R.id.btn_Registrar);
-        can = (Button) findViewById(R.id.btn_Registrar);
+        can = (Button) findViewById(R.id.btn_Cancelar);
         reg.setOnClickListener(this);
         can.setOnClickListener(this);
     }
@@ -48,7 +48,7 @@ public class MainActivityRegistrar extends AppCompatActivity implements View.OnC
                     Toast.makeText(this, "Usuario ya Registrado", Toast.LENGTH_LONG).show();
                 }
                 break;
-            case R.id.btn_Registrar:
+            case R.id.btn_Cancelar:
                 Intent i = new Intent(MainActivityRegistrar.this, MainActivity.class);
                 startActivity(i);
                 break;
