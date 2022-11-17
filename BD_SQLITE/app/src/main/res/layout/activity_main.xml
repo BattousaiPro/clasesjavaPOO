@@ -80,11 +80,11 @@
         android:text="Registrar"
         android:textColor="#831414"
         android:textSize="20sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn_Entrar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_Registrar"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/btn_Entrar"
+        android:id="@+id/btn_Registrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="59dp"

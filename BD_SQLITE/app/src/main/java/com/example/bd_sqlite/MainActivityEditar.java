@@ -10,8 +10,12 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivityEditar extends AppCompatActivity implements View.OnClickListener {
-    EditText EdiUser, EdiPass, EdiNom, EdiApe;
-    Button btnActualizar, btnCancelar;
+    EditText EdiUser;
+    EditText EdiPass;
+    EditText EdiNom;
+    EditText EdiApe;
+    Button btnActualizar;
+    Button btnRegistrar;
     int id = 0;
     Usuario u;
     BDUsuario bdUsuario;
@@ -26,9 +30,9 @@ public class MainActivityEditar extends AppCompatActivity implements View.OnClic
         EdiNom = findViewById(R.id.EditNombre);
         EdiApe = findViewById(R.id.EditApellido);
         btnActualizar = findViewById(R.id.btn_Actualizar);
-        btnCancelar = findViewById(R.id.btn_EditCancelar);
+        btnRegistrar = findViewById(R.id.btn_Registrar);
         btnActualizar.setOnClickListener(this);
-        btnCancelar.setOnClickListener(this);
+        btnRegistrar.setOnClickListener(this);
 
         Bundle b = getIntent().getExtras();
         id = b.getInt("ID");
@@ -41,7 +45,7 @@ public class MainActivityEditar extends AppCompatActivity implements View.OnClic
 
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_EditActualizar:
+            case R.id.btn_Actualizar:
                 u.setUsuario(EdiUser.getText().toString());
                 u.setPassword(EdiPass.getText().toString());
                 u.setNombre(EdiNom.getText().toString());
@@ -58,14 +62,15 @@ public class MainActivityEditar extends AppCompatActivity implements View.OnClic
                 } else {
                     Toast.makeText(this, "No Se Puede Actualizar", Toast.LENGTH_LONG).show();
 
-                    case R.id.btn_EditCancerlar:
-                        Intent a2 = new Intent(MainActivityEditar.this, MainActivity.class);
-                        a2.putExtra("ID", u.getId());
-                        startActivity(a2);
-                        finish();
-                        break;
-                }
 
+                }
+                break;
+            case R.id.btn_Registrar:
+                Intent a2 = new Intent(MainActivityEditar.this, MainActivity.class);
+                a2.putExtra("ID", u.getId());
+                startActivity(a2);
+                finish();
+                break;
         }
     }
 }

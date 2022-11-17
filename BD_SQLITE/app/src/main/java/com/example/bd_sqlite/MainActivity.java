@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         user = (EditText) findViewById(R.id.User);
         pass = (EditText) findViewById(R.id.RegApellido);
-        btnEntrar = (Button) findViewById(R.id.btn_Entrar);
+        btnEntrar = (Button) findViewById(R.id.btn_Registrar);
         btnRegistrar = (Button) findViewById(R.id.btn_Registrar);
         btnEntrar.setOnClickListener(this);
         btnRegistrar.setOnClickListener(this);
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_Entrar:
+            case R.id.btn_Registrar:
                 String u = user.getText().toString();
                 String p = pass.getText().toString();
                 if (u.equals("") && p.equals("")) {

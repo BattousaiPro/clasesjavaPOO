@@ -35,7 +35,7 @@ public class BDUsuario {
         }
     }
 
-    public boolean updateUsuario(int id) {
+    public boolean deleteUsuario(int id) {
         return (sql.delete("Usuario", "id" + id, null) > 0);
     }
 
