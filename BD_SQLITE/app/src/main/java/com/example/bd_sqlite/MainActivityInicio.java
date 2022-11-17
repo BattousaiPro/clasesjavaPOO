@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivityInicio extends AppCompatActivity implements View.OnClickListener {
-    Button btnEditar, getBtnEliminar, btnMostrar, btnSalir;
+    Button btnEditar, btnEliminar, btnMostrar, btnSalir;
     TextView nombre;
     int id = 0;
     Usuario u;
@@ -28,11 +28,11 @@ public class MainActivityInicio extends AppCompatActivity implements View.OnClic
         btnMostrar = findViewById(R.id.Mostrar);
         btnSalir = findViewById(R.id.Salir);
         btnEditar.setOnClickListener(this);
-        getBtnEliminar.setOnClickListener(this);
+        btnEliminar.setOnClickListener(this);
         btnMostrar.setOnClickListener(this);
         btnSalir.setOnClickListener(this);
 
-        bundel b = getIntent().getExtras();
+        Bundle b = getIntent().getExtras();
         id = b.getInt("ID");
         u = bdUsuario.getUsuarioID(id);
         nombre.setText(u.getNombre() + " " + u.getApellido());
@@ -41,7 +41,7 @@ public class MainActivityInicio extends AppCompatActivity implements View.OnClic
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.Editar:
-                Intet a = Integer(MainActivityInicio.this, MainActivityEditar.class);
+                Intent a = new Intent(MainActivityInicio.this, MainActivityEditar.class);
                 a.putExtra("id", id);
                 startActivity(a);
                 break;

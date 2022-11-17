@@ -10,43 +10,148 @@
         android:id="@+id/imageView"
         android:layout_width="1243dp"
         android:layout_height="1083dp"
-        app:srcCompat="@drawable/_531"
-        tools:layout_editor_absoluteX="-621dp"
-        tools:layout_editor_absoluteY="-162dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.734"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.474"
+        app:srcCompat="@drawable/_531" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/preview" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="154dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Entrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegNombre"
+        app:srcCompat="@drawable/hd_wallpaper_chibi_kenshin_anime_rurouni_kenshin_removebg_preview" />
+
+    <EditText
+        android:id="@+id/RegUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:hint="Usuario"
+        android:inputType="textEmailAddress"
+        android:textColor="#CD3232"
+        android:textColorHint="#CD3232"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/RegPass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/RegNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="64dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:inputType="textPersonName"
+        android:text="Nombre"
+        android:textColor="#CD3232"
+        android:textColorHint="#CD3232"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="@+id/RegPass"
+        app:layout_constraintTop_toBottomOf="@+id/RegPass" />
+
+    <EditText
+        android:id="@+id/RegApellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:hint="Apellido"
+        android:inputType="textPassword"
+        android:textColor="#AA2F2F"
+        android:textColorHint="#CD3232"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegNombre" />
 
     <Button
         android:id="@+id/btn_Entrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="36dp"
         android:backgroundTint="#000000"
         android:text="Registrar"
-        android:textColor="#831414"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="586dp" />
+        android:textColor="#CD3232"
+        android:textColorHint="#CD3232"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Registrar"
+        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     <Button
-        android:id="@+id/btn_Registar"
+        android:id="@+id/btn_Registrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="77dp"
         android:backgroundTint="#000000"
         android:text="Cancelar"
-        android:textColor="#831414"
-        tools:layout_editor_absoluteX="269dp"
-        tools:layout_editor_absoluteY="582dp" />
+        android:textColor="#CD3232"
+        android:textColorHint="#CD3232"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Entrar"
+        app:layout_constraintStart_toStartOf="@+id/btn_Entrar"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Entrar" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="360dp"
-        android:layout_height="134dp"
-        app:srcCompat="@drawable/preview"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="0dp" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="63dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Crear Cuenta nueva"
+        android:textColor="#C13C3C"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/RegUsuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="207dp"
-        android:layout_height="193dp"
-        app:srcCompat="@drawable/hd_wallpaper_chibi_kenshin_anime_rurouni_kenshin_removebg_preview"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="118dp" />
+    <EditText
+        android:id="@+id/RegPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="13dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#CD3232"
+        android:textColorHint="#CD3232"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/RegNombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegUsuario" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

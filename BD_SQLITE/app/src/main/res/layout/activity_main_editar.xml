@@ -6,4 +6,157 @@
     android:layout_height="match_parent"
     tools:context=".MainActivityEditar">
 
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="1814dp"
+        android:layout_height="1221dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.645"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/_531" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/preview" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="69dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Editar Cuenta"
+        android:textColor="#8E0D0D"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/EditUsuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+    <EditText
+        android:id="@+id/EditUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="25dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:hint="Usuario"
+        android:inputType="textEmailAddress"
+        android:textColor="#8E0D0D"
+        android:textColorHint="#8E0D0D"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/EditPass"
+        app:layout_constraintStart_toStartOf="@+id/EditPass"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/EditPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#8E0D0D"
+        android:textColorHint="#8E0D0D"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/EditNombre"
+        app:layout_constraintStart_toStartOf="@+id/EditNombre"
+        app:layout_constraintTop_toBottomOf="@+id/EditUsuario" />
+
+    <EditText
+        android:id="@+id/EditNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginBottom="38dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:hint="Nombre"
+        android:inputType="textEmailAddress"
+        android:textColor="#8E0D0D"
+        android:textColorHint="#8E0D0D"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/EditApellido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditPass" />
+
+    <EditText
+        android:id="@+id/EditApellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="6dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:hint="Apellido"
+        android:inputType="textPassword"
+        android:textColor="#8E0D0D"
+        android:textColorHint="#8E0D0D"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditNombre" />
+
+    <Button
+        android:id="@+id/btn_Entrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#000000"
+        android:fontFamily="sans-serif-black"
+        android:hint="#8E0D0D"
+        android:text="Registrar"
+        android:textColor="#8E0D0D"
+        android:textColorHint="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView10" />
+
+    <Button
+        android:id="@+id/btn_Actualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginBottom="63dp"
+        android:backgroundTint="#000000"
+        android:fontFamily="sans-serif-black"
+        android:hint="#8E0D0D"
+        android:text="Actualizar"
+        android:textColor="#8E0D0D"
+        android:textColorHint="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Actualizar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_Entrar"
+        app:layout_constraintTop_toBottomOf="@+id/EditApellido"
+        app:srcCompat="@drawable/hd_wallpaper_chibi_kenshin_anime_rurouni_kenshin_removebg_preview" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

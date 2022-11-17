@@ -1,6 +1,8 @@
 package com.example.bd_sqlite;
 
+
 public class Usuario {
+
     private Integer id;
     private String Nombre;
     private String Apellido;
@@ -10,7 +12,7 @@ public class Usuario {
     public Usuario() {
     }
 
-    public boolean isNull() {
+    public Boolean isNull() {
         if ("".equals(Nombre)
                 && "".equals(Apellido)
                 && "".equals(Usuario)
@@ -72,4 +74,5 @@ public class Usuario {
                 ", Password='" + Password + '\'' +
                 '}';
     }
+
 }

@@ -20,10 +20,13 @@ public class MainActivityEditar extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_editar);
+
         EdiUser = findViewById(R.id.EditUsuario);
         EdiPass = findViewById(R.id.EditPass);
         EdiNom = findViewById(R.id.EditNombre);
         EdiApe = findViewById(R.id.EditApellido);
+        btnActualizar = findViewById(R.id.btn_Actualizar);
+        btnCancelar = findViewById(R.id.btn_EditCancelar);
         btnActualizar.setOnClickListener(this);
         btnCancelar.setOnClickListener(this);
 
@@ -44,7 +47,7 @@ public class MainActivityEditar extends AppCompatActivity implements View.OnClic
                 u.setNombre(EdiNom.getText().toString());
                 u.setApellido(EdiApe.getText().toString());
 
-                if (!u.isNull(u)) {
+                if (!u.isNull()) {
                     Toast.makeText(this, "ERROR : Campos Vacios ", Toast.LENGTH_LONG).show();
                 } else if (bdUsuario.updateUsuario(u)) {
                     Toast.makeText(this, "Actualizacion Exitosa", Toast.LENGTH_LONG).show();
@@ -57,8 +60,8 @@ public class MainActivityEditar extends AppCompatActivity implements View.OnClic
 
                     case R.id.btn_EditCancerlar:
                         Intent a2 = new Intent(MainActivityEditar.this, MainActivity.class);
-                        i2.putExtra("ID", u.getId());
-                        startActivity(i2);
+                        a2.putExtra("ID", u.getId());
+                        startActivity(a2);
                         finish();
                         break;
                 }

@@ -22,7 +22,7 @@ public class BDUsuario {
         u = new Usuario();
     }
 
-    public boolean insertUsuario(Usuario u) {
+    public boolean updateUsuario(Usuario u) {
         if (buscar(u.getUsuario()) == 0) {
             ContentValues cv = new ContentValues();
             cv.put("usuario", u.getUsuario());
@@ -33,6 +33,10 @@ public class BDUsuario {
         } else {
             return false;
         }
+    }
+
+    public boolean updateUsuario(int id) {
+        return (sql.delete("Usuario", "id" + id, null) > 0);
     }
 
     public int buscar(String u) {
@@ -47,7 +51,7 @@ public class BDUsuario {
     }
 
     public ArrayList<Usuario> selectUsiario() {
-        ArrayList<Usuario> list = new ArrayList<Usuario>();
+        ArrayList<Usuario> lista = new ArrayList<Usuario>();
         lista.clear();
         Cursor cr = sql.rawQuery("select * from usuario", null);
         if (cr != null && cr.moveToFirst()) {
@@ -64,7 +68,7 @@ public class BDUsuario {
         return lista;
     }
 
-    public int longin(String u, String p) {
+    public int login(String u, String p) {
         int a = 0;
         Cursor cr = sql.rawQuery("select * from usuario", null);
         if (cr != null && cr.moveToFirst()) {
