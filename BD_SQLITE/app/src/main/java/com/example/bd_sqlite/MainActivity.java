@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         user = (EditText) findViewById(R.id.User);
         pass = (EditText) findViewById(R.id.RegApellido);
-        btnEntrar = (Button) findViewById(R.id.btn_Registrar);
+        btnEntrar = (Button) findViewById(R.id.btn_Entrar);
         btnRegistrar = (Button) findViewById(R.id.btn_Registrar);
         btnEntrar.setOnClickListener(this);
         btnRegistrar.setOnClickListener(this);
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     startActivity(i2);
                 }
                 break;
-            case R.id.btn_Registrar:
+            case R.id.btn_Entrar:
                 Intent i = new Intent(MainActivity.this, MainActivityRegistrar.class);
                 startActivity(i);
                 break;
