@@ -23,12 +23,12 @@ public class MainActivityMostrar extends AppCompatActivity {
         bdUsuario = new BDUsuario(this);
         ArrayList<Usuario> l = bdUsuario.selectUsiario();
 
-        ArrayList<String> list = new ArrayList<>();
+        ArrayList<String> listUser = new ArrayList<>();
         for (Usuario u : l) {
-            list.add(u.getNombre() + " " + u.getApellido());
+            listUser.add(u.getNombre() + " " + u.getApellido());
         }
 
-        ArrayAdapter<String> a = new ArrayAdapter<>(this, android.R.layout.simple_expandable_list_item_1, lista);
+        ArrayAdapter<String> a = new ArrayAdapter<>(this, android.R.layout.simple_expandable_list_item_1, listUser);
         lista.setAdapter(a);
     }
 }
