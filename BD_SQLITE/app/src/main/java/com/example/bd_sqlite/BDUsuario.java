@@ -51,7 +51,7 @@ public class BDUsuario {
     public ArrayList<Usuario> selectUsiario() {
         ArrayList<Usuario> lista = new ArrayList<Usuario>();
         lista.clear();
-        Cursor cr = sql.rawQuery("select * from usuario", null);
+        Cursor cr = sql.rawQuery("select id, usuario, pass, nombre, apellido from usuario", null);
         if (cr != null && cr.moveToFirst()) {
             do {
                 Usuario u = new Usuario();
@@ -68,7 +68,7 @@ public class BDUsuario {
 
     public int login(String userName, String password) {
         int a = 0;
-        Cursor cr = sql.rawQuery("select * from usuario", null);
+        Cursor cr = sql.rawQuery("select usuario, pass from usuario", null);
         if (cr != null && cr.moveToFirst()) {
             do {
                 if (cr.getString(1).equals(userName)
