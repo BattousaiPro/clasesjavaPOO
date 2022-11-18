@@ -34,7 +34,7 @@ public class BDUsuario {
     }
 
     public boolean deleteUsuario(int id) {
-        return (sql.delete("Usuario", "id" + id, null) > 0);
+        return (sql.delete("usuario", "id" + id, null) > 0);
     }
 
     public int buscar(String userName) {
