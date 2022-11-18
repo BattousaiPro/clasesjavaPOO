@@ -12,11 +12,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivityInicio extends AppCompatActivity implements View.OnClickListener {
-    Button btnEditar, btnEliminar, btnMostrar, btnSalir;
-    TextView nombre;
-    int id = 0;
-    Usuario u;
-    BDUsuario bdUsuario;
+    public Button btnEditar;
+    public Button btnEliminar;
+    public Button btnMostrar;
+    public Button btnSalir;
+    public TextView nombre;
+    public int id = 0;
+    public Usuario u;
+    public BDUsuario bdUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

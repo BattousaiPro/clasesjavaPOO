@@ -10,15 +10,15 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivityEditar extends AppCompatActivity implements View.OnClickListener {
-    EditText EdiUser;
-    EditText EdiPass;
-    EditText EdiNom;
-    EditText EdiApe;
-    Button btnActualizar;
-    Button btnRegistrar;
-    int id = 0;
-    Usuario u;
-    BDUsuario bdUsuario;
+    public EditText EdiUser;
+    public EditText EdiPass;
+    public EditText EdiNom;
+    public EditText EdiApe;
+    public Button btnActualizar;
+    public Button btnRegistrar;
+    public int id = 0;
+    public Usuario u;
+    public BDUsuario bdUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

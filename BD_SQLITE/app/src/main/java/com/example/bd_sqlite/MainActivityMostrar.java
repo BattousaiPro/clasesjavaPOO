@@ -11,8 +11,8 @@ import java.util.ArrayList;
 
 public class MainActivityMostrar extends AppCompatActivity {
 
-    ListView lista;
-    BDUsuario bdUsuario;
+    public ListView lista;
+    public BDUsuario bdUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

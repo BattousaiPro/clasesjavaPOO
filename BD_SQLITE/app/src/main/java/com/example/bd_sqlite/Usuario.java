@@ -2,7 +2,6 @@ package com.example.bd_sqlite;
 
 
 public class Usuario {
-
     private Integer id;
     private String Nombre;
     private String Apellido;

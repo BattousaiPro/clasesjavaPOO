@@ -10,43 +10,26 @@
         android:id="@+id/imageView"
         android:layout_width="1243dp"
         android:layout_height="1083dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.734"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.474"
         app:srcCompat="@drawable/_531" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="11dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/preview" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="154dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="14dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_Registrar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegNombre"
-        app:srcCompat="@drawable/hd_wallpaper_chibi_kenshin_anime_rurouni_kenshin_removebg_preview" />
+        app:srcCompat="@drawable/hd_wallpaper_chibi_kenshin_anime_rurouni_kenshin_removebg_preview"
+        tools:layout_editor_absoluteX="261dp"
+        tools:layout_editor_absoluteY="200dp" />
 
     <EditText
         android:id="@+id/RegUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="18dp"
         android:ems="10"
         android:fontFamily="sans-serif-black"
         android:hint="Usuario"
@@ -54,16 +37,13 @@
         android:textColor="#CD3232"
         android:textColorHint="#CD3232"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/RegPass"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="215dp" />
 
     <EditText
         android:id="@+id/RegNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginBottom="64dp"
         android:ems="10"
         android:fontFamily="sans-serif-black"
         android:inputType="textPersonName"
@@ -71,16 +51,13 @@
         android:textColor="#CD3232"
         android:textColorHint="#CD3232"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView6"
-        app:layout_constraintStart_toStartOf="@+id/RegPass"
-        app:layout_constraintTop_toBottomOf="@+id/RegPass" />
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="403dp" />
 
     <EditText
         android:id="@+id/RegApellido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="23dp"
         android:ems="10"
         android:fontFamily="sans-serif-black"
         android:hint="Apellido"
@@ -88,61 +65,48 @@
         android:textColor="#AA2F2F"
         android:textColorHint="#CD3232"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegNombre" />
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="493dp" />
 
     <Button
         android:id="@+id/btn_Registrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginBottom="36dp"
         android:backgroundTint="#000000"
         android:text="Registrar"
         android:textColor="#CD3232"
         android:textColorHint="#CD3232"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_Registrar"
-        app:layout_constraintEnd_toStartOf="@+id/imageView6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="629dp" />
 
     <Button
         android:id="@+id/btn_Cancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="77dp"
         android:backgroundTint="#000000"
         android:text="Cancelar"
         android:textColor="#CD3232"
         android:textColorHint="#CD3232"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btn_Registrar"
-        app:layout_constraintStart_toStartOf="@+id/btn_Registrar"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Registrar" />
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="629dp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="63dp"
         android:fontFamily="sans-serif-black"
         android:text="Crear Cuenta nueva"
         android:textColor="#C13C3C"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/RegUsuario"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="34dp" />
 
     <EditText
         android:id="@+id/RegPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="13dp"
         android:ems="10"
         android:fontFamily="sans-serif-black"
         android:hint="Password"
@@ -150,8 +114,7 @@
         android:textColor="#CD3232"
         android:textColorHint="#CD3232"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/RegNombre"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegUsuario" />
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="309dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,9 +11,13 @@ import android.widget.Toast;
 
 public class MainActivityRegistrar extends AppCompatActivity implements View.OnClickListener {
 
-    EditText us, pas, nom, ap;
-    Button reg, can;
-    BDUsuario bdUsuario;
+    public EditText us;
+    public EditText pas;
+    public EditText nom;
+    public EditText ap;
+    public Button reg;
+    public Button can;
+    public BDUsuario bdUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
