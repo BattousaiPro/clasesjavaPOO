@@ -8,27 +8,25 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 
 public class BDUsuario {
-    Context c;
-    Usuario u;
+    Context globalContext;
     ArrayList<Usuario> lista;
     SQLiteDatabase sql;
     String bd = "BDusuaio";
     String table = "create table if not exists usuario(id integer primary key autoincrement, usuario text, pass text, nombre text, apellido text)";
 
-    public BDUsuario(Context c) {
-        this.c = c;
-        sql = c.openOrCreateDatabase(bd, c.MODE_PRIVATE, null);
+    public BDUsuario(Context context) {
+        this.globalContext = context;
+        sql = context.openOrCreateDatabase(bd, context.MODE_PRIVATE, null);
         sql.execSQL(table);
-        u = new Usuario();
     }
 
-    public boolean updateUsuario(Usuario u) {
-        if (buscar(u.getUsuario()) == 0) {
+    public boolean updateUsuario(Usuario usuario) {
+        if (buscar(usuario.getUsuario()) == 0) {
             ContentValues cv = new ContentValues();
-            cv.put("usuario", u.getUsuario());
-            cv.put("pass", u.getPassword());
-            cv.put("nombre", u.getNombre());
-            cv.put("apellido", u.getApellido());
+            cv.put("usuario", usuario.getUsuario());
+            cv.put("pass", usuario.getPassword());
+            cv.put("nombre", usuario.getNombre());
+            cv.put("apellido", usuario.getApellido());
             return (sql.insert("usuario", null, cv) > 0);
         } else {
             return false;
@@ -39,11 +37,11 @@ public class BDUsuario {
         return (sql.delete("Usuario", "id" + id, null) > 0);
     }
 
-    public int buscar(String u) {
+    public int buscar(String userName) {
         int x = 0;
         lista = selectUsiario();
         for (Usuario us : lista) {
-            if (us.getUsuario().equals(u)) {
+            if (us.getUsuario().equals(userName)) {
                 x++;
             }
         }
@@ -68,12 +66,13 @@ public class BDUsuario {
         return lista;
     }
 
-    public int login(String u, String p) {
+    public int login(String userName, String password) {
         int a = 0;
         Cursor cr = sql.rawQuery("select * from usuario", null);
         if (cr != null && cr.moveToFirst()) {
             do {
-                if (cr.getString(1).equals(u) && cr.getString(2).equals(p)) {
+                if (cr.getString(1).equals(userName)
+                        && cr.getString(2).equals(password)) {
                     a++;
                 }
             } while (cr.moveToFirst());
@@ -81,10 +80,10 @@ public class BDUsuario {
         return a;
     }
 
-    public Usuario getUsuario(String u, String p) {
+    public Usuario getUsuario(String userName, String password) {
         lista = selectUsiario();
         for (Usuario us : lista) {
-            if (us.getUsuario().equals(u) && us.getPassword().equals(p)) {
+            if (us.getUsuario().equals(userName) && us.getPassword().equals(password)) {
                 return us;
             }
         }
